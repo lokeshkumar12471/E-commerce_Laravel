@@ -52,6 +52,8 @@
     <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="{{asset('js/jqBootstrapValidation.js')}}" type="1ca3e1fae7bcee821cfb7c9d-text/javascript"></script>
     <script src="{{asset('frontend/js/contact_me.js')}}" type="1ca3e1fae7bcee821cfb7c9d-text/javascript"></script>
+    <link href="{{ asset('frontend/vendor/datatables/datatables.min.css') }}" rel="stylesheet" />
+    <script src="{{asset('frontend/vendor/datatables/datatables.min.js')}}" type="bef35915e8432d98485f6668-text/javascript"></script>
 </body>
 
 </html>

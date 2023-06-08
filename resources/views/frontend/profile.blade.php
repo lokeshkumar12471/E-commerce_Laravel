@@ -1,33 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<!-- Mirrored from askbootstrap.com/preview/chpoee/profile.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 06 Jun 2023 07:54:27 GMT -->
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Gurdeep singh osahan">
-    <meta name="author" content="Gurdeep singh osahan">
-    <title>Chpoee - Bootstrap E-Commerce Template</title>
-
-    <link rel="icon" type="image/png" href="img/fav-icon.png">
-
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <link href="vendor/select2/css/select2-bootstrap.css" />
-    <link href="vendor/select2/css/select2.min.css" rel="stylesheet" />
-
-    <link href="vendor/fontawesome/css/all.min.css" rel="stylesheet">
-    <link href="vendor/icofont/icofont.min.css" rel="stylesheet">
-
-    <link href="css/style.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="vendor/owl-carousel/owl.carousel.css">
-    <link rel="stylesheet" href="vendor/owl-carousel/owl.theme.css">
-</head>
-
-<body>
-
+<x-guest-layout>
     <div class="modal fade" id="edit-profile-modal" tabindex="-1" role="dialog" aria-labelledby="edit-profile"
         aria-hidden="true">
         <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
@@ -450,242 +421,7 @@
             </div>
         </div>
     </div>
-    <div class="bg-light shadow-sm">
-        <div class="header-top border-bottom bg-white">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <ul class="list-inline float-right mb-0">
-                            <li class="list-inline-item border-right border-left py-1 pr-2 mr-2 pl-2">
-                                <a href><i class="icofont icofont-iphone"></i> +1-123-456-7890</a>
-                            </li>
-                            <li class="list-inline-item border-right py-1 pr-2 mr-2">
-                                <a href="contact-us.html"><i class="icofont icofont-headphone-alt"></i> Contact Us</a>
-                            </li>
-                            <li class="list-inline-item">
-                                <span>Download App</span> &nbsp;
-                                <a href="#"><i class="icofont icofont-brand-windows"></i></a>
-                                <a href="#"><i class="icofont icofont-brand-apple"></i></a>
-                                <a href="#"><i class="icofont icofont-brand-android-robot"></i></a>
-                            </li>
-                        </ul>
-                        <p class="mb-0 py-1">FREE CASH ON DELIVERY &amp; SHIPPING AVAILABLE OVER <span
-                                class="text-danger font-weight-bold">$499</span></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="main-nav shadow-sm">
-            <nav class="navbar navbar-expand-lg navbar-light bg-white pt-0 pb-0">
-                <div class="container">
-                    <a class="navbar-brand" href="index-2.html">
-                        <img src="img/logo.png" alt="gurdeep osahan designer">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto main-nav-left">
-                            <li class="nav-item">
-                                <a class="nav-link" href="index-2.html"><i class="icofont-ui-home"></i></a>
-                            </li>
-                            <li class="nav-item dropdown mega-drop-main">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-                                    role="button" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false">
-                                    WOMEN
-                                </a>
-                                <div class="dropdown-menu mega-drop  shadow-sm border-0"
-                                    aria-labelledby="navbarDropdown">
-                                    <div class="row ml-0 mr-0">
-                                        <div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
-                                            <div class="mega-list">
-                                                <a class="mega-title" href="product-grid.html">Lingerie &
-                                                    Sleepwear</a>
-                                                <a href="product-grid.html">Bras & Lingerie Sets</a>
-                                                <a href="product-grid.html">Briefs</a>
-                                                <a href="product-grid.html">Shapewear</a>
-                                                <a href="product-grid.html">Sleepwear & Loungewear</a>
-                                                <a href="product-grid.html">Swimwear</a>
-                                                <a href="product-grid.html">Camisoles & Thermals</a>
-                                                <a href="product-grid.html">Blazers & Coats</a>
-                                                <a href="product-grid.html">Suits</a>
-                                                <a href="product-grid.html">Rain Jackets</a>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
-                                            <div class="mega-list">
-                                                <a class="mega-title" href="product-grid.html">Bottomwear</a>
-                                                <a href="product-grid.html"> Jeans</a>
-                                                <a href="product-grid.html">Casual Trousers</a>
-                                                <a href="product-grid.html">Formal Trousers</a>
-                                                <a href="product-grid.html">Shorts</a>
-                                                <a href="product-grid.html">Track Pants & Joggers</a>
-                                                <a href="product-grid.html">T-Shirts</a>
-                                                <a href="product-grid.html">Sweatshirts</a>
-                                                <a href="product-grid.html">Casual Shirts</a>
-                                                <a href="product-grid.html">Formal Shirts</a>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
-                                            <div class="mega-list">
-                                                <a class="mega-title" href="product-grid.html">Western Wear</a>
-                                                <a href="product-grid.html">Sweaters</a>
-                                                <a href="product-grid.htproduct-grid.html">Jackets</a>
-                                                <a href="product-grid.html">Blazers & Coats</a>
-                                                <a href="product-grid.html">Suits</a>
-                                                <a href="product-grid.html">Rain Jackets</a>
-                                                <a href="product-grid.html">T-Shirts</a>
-                                                <a href="product-grid.html">Casual Shirts</a>
-                                                <a href="product-grid.html">Formal Shirts</a>
-                                                <a href="product-grid.html">Sweatshirts</a>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
-                                            <div class="mega-list">
-                                                <a class="mega-title" href="product-grid.html">Footwear</a>
-                                                <a href="product-grid.html">Casual Shoes</a>
-                                                <a href="product-grid.html">Sports Shoes</a>
-                                                <a href="product-grid.html">Formal Shoes</a>
-                                                <a href="product-grid.html">Sandals & Floaters</a>
-                                                <a href="product-grid.html">Flip Flops</a>
-                                                <a href="product-grid.html">Socks</a>
-                                                <a href="product-grid.html">Formal Shirts</a>
-                                                <a href="product-grid.html">Sneakers</a>
-                                                <a href="product-grid.html">Sweatshirts</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="nav-item dropdown mega-drop-main">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-                                    role="button" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false">
-                                    MEN</a>
-                                <div class="dropdown-menu mega-drop  shadow-sm border-0"
-                                    aria-labelledby="navbarDropdown">
-                                    <div class="row ml-0 mr-0">
-                                        <div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
-                                            <div class="mega-list">
-                                                <a class="mega-title" href="product-grid.html">Topwear</a>
-                                                <a href="product-grid.html">T-Shirts</a>
-                                                <a href="product-grid.html">Casual Shirts</a>
-                                                <a href="product-grid.html">Formalproduct-grid.htmlShirts</a>
-                                                <a href="product-grid.html">Sweatshirts</a>
-                                                <a href="product-grid.html">Sweaters</a>
-                                                <a href="product-grid.html">Jackets</a>
-                                                <a href="product-grid.html">Blazers & Coats</a>
-                                                <a href="product-grid.html">Suits</a>
-                                                <a href="product-grid.html">Rain Jackets</a>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
-                                            <div class="mega-list">
-                                                <a class="mega-title" href="product-grid.html">Western Wear</a>
-                                                <a href="product-grid.html">Sweaters</a>
-                                                <a href="product-grid.html">Jackets</a>
-                                                <a href="product-grid.html">Blazers & Coats</a>
-                                                <a href="product-grid.html">Suits</a>
-                                                <a href="product-grid.html">Rain Jackets</a>
-                                                <a href="product-grid.html">T-Shirts</a>
-                                                <a href="product-grid.html">Casual Shirts</a>
-                                                <a href="product-grid.html">Formal Shirts</a>
-                                                <a href="product-grid.html">Sweatshirts</a>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
-                                            <div class="mega-list">
-                                                <a class="mega-title" href="product-grid.html">Bottomwear</a>
-                                                <a href="product-grid.html"> Jeans</a>
-                                                <a href="product-grid.html">Casual Trousers</a>
-                                                <a href="product-grid.html">Formal Trousers</a>
-                                                <a href="product-grid.html">Shorts</a>
-                                                <a href="product-grid.html">Track Pants & Joggers</a>
-                                                <a href="product-grid.html">T-Shirts</a>
-                                                <a href="product-grid.html">Sweatshirts</a>
-                                                <a href="product-grid.html">Casual Shirts</a>
-                                                <a href="product-grid.html">Formal Shirts</a>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
-                                            <div class="mega-list">
-                                                <a class="mega-title" href="product-grid.html">Footwear</a>
-                                                <a href="product-grid.html">Casual Shoes</a>
-                                                <a href="product-grid.html">Sports Shoes</a>
-                                                <a href="product-grid.html">Formal Shoes</a>
-                                                <a href="product-grid.html">Sneakers</a>
-                                                <a href="product-grid.html">Sweatshirts</a>
-                                                <a href="product-grid.html">Sandals & Floaters</a>
-                                                <a href="product-grid.html">Flip Flops</a>
-                                                <a href="product-grid.html">Socks</a>
-                                                <a href="product-grid.html">Formal Shirts</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="product-grid.html">SALE</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-                                    role="button" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false">
-                                    PAGES
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right shadow-sm border-0">
-                                    <a class="dropdown-item" href="product-grid.html">Product List</a>
-                                    <a class="dropdown-item" href="product-detail.html">Product Detail</a>
-                                    <a class="dropdown-item" href="checkout.html">Checkout</a>
-                                    <a class="dropdown-item" href="profile.html">My Account</a>
-                                    <a class="dropdown-item" href="about-us.html">About Us</a>
-                                    <a class="dropdown-item" href="faq.html">FAQ</a>
-                                    <a class="dropdown-item" href="contact-us.html">Contact Us</a>
-                                </div>
-                            </li>
-                        </ul>
-                        <form class="form-inline my-2 my-lg-0 top-search">
-                            <button class="btn-link" type="submit"><i class="icofont-search"></i></button>
-                            <input class="form-control mr-sm-2" type="search"
-                                placeholder="Search for products, brands and more" aria-label="Search">
-                        </form>
-                        <ul class="navbar-nav ml-auto profile-nav-right">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link ml-0 dropdown-toggle" href="#" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <img alt="Generic placeholder image" src="img/user/1.png"
-                                        class="nav-osahan-pic rounded-pill"> My Account
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right shadow-sm border-0">
-                                    <a class="dropdown-item" href="profile.html"><i class="icofont-ui-user"></i> My
-                                        Profile</a>
-                                    <a class="dropdown-item" href="profile.html"><i class="icofont-location-pin"></i>
-                                        My Address</a>
-                                    <a class="dropdown-item" href="profile.html"><i class="icofont-heart"></i> Wish
-                                        List</a>
-                                    <a class="dropdown-item" href="profile.html"><i class="icofont-list"></i> Order
-                                        List</a>
-                                    <a class="dropdown-item" href="profile.html"><i
-                                            class="icofont-file-document"></i> Order Status</a>
-                                    <a class="dropdown-item" href="profile.html"><i class="icofont-logout"></i>
-                                        Logout</a>
-                                </div>
-                            </li>
-                            <li class="nav-item cart-nav">
-                                <a data-toggle="offcanvas" class="nav-link" href="#">
-                                    <i class="icofont-basket"></i> Cart
-                                    <span class="badge badge-danger">5</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </div>
+
     <section class="py-5 account-page bg-light">
         <div class="container">
             <div class="row">
@@ -694,8 +430,8 @@
                         <div class="p-4">
                             <div class="osahan-user text-center">
                                 <div class="osahan-user-media">
-                                    <img class="mb-3 rounded-pill shadow-sm mt-1" src="img/user/1.jpg"
-                                        alt="gurdeep singh osahan">
+                                    <img class="mb-3 rounded-pill shadow-sm mt-1"
+                                        src="{{ asset('frontend/img/user/1.jpg') }}" alt="gurdeep singh osahan">
                                     <div class="osahan-user-media-body">
                                         <h6 class="mb-2 font-weight-bold">Gurdeep Singh</h6>
                                         <p class="mb-1">+91 85680-79956</p>
@@ -737,7 +473,8 @@
                                         class="icofont-file-document"></i> Order Status</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="index-2.html"><i class="icofont-logout"></i> Logout</a>
+                                <a class="nav-link" href="{{ route('/') }}"><i class="icofont-logout"></i>
+                                    Logout</a>
                             </li>
                         </ul>
                     </div>
@@ -1131,8 +868,8 @@
                                                                 data-toggle="modal" data-target="#add-address-modal"
                                                                 href="#"><i class="icofont-ui-edit"></i>
                                                                 EDIT</a> <a class="text-danger" data-toggle="modal"
-                                                                data-target="#delete-address-modal"
-                                                                href="#"><i class="icofont-ui-delete"></i>
+                                                                data-target="#delete-address-modal" href="#"><i
+                                                                    class="icofont-ui-delete"></i>
                                                                 DELETE</a></p>
                                                     </div>
                                                 </div>
@@ -1158,8 +895,8 @@
                                                                 data-toggle="modal" data-target="#add-address-modal"
                                                                 href="#"><i class="icofont-ui-edit"></i>
                                                                 EDIT</a> <a class="text-danger" data-toggle="modal"
-                                                                data-target="#delete-address-modal"
-                                                                href="#"><i class="icofont-ui-delete"></i>
+                                                                data-target="#delete-address-modal" href="#"><i
+                                                                    class="icofont-ui-delete"></i>
                                                                 DELETE</a></p>
                                                     </div>
                                                 </div>
@@ -1185,8 +922,8 @@
                                                                 data-toggle="modal" data-target="#add-address-modal"
                                                                 href="#"><i class="icofont-ui-edit"></i>
                                                                 EDIT</a> <a class="text-danger" data-toggle="modal"
-                                                                data-target="#delete-address-modal"
-                                                                href="#"><i class="icofont-ui-delete"></i>
+                                                                data-target="#delete-address-modal" href="#"><i
+                                                                    class="icofont-ui-delete"></i>
                                                                 DELETE</a></p>
                                                     </div>
                                                 </div>
@@ -1216,7 +953,8 @@
                                                         class="icofont icofont-close-line"></i></a></span>
                                             <a href="#">
                                                 <span class="badge badge-danger">NEW</span>
-                                                <img src="img/item/1.jpg" class="card-img-top" alt="..."></a>
+                                                <img src="{{ asset('frontend/img/item/1.jpg') }}" class="card-img-top"
+                                                    alt="..."></a>
                                             <div class="card-body">
                                                 <h6 class="card-title mb-1">Floret Printed Ivory Skater Dress</h6>
                                                 <div class="stars-rating"><i
@@ -1237,7 +975,8 @@
                                                         class="icofont icofont-close-line"></i></a></span>
                                             <a href="#">
                                                 <span class="badge badge-success">50% OFF</span>
-                                                <img src="img/item/2.jpg" class="card-img-top" alt="..."></a>
+                                                <img src="{{ asset('frontend/img/item/2.jpg') }}" class="card-img-top"
+                                                    alt="..."></a>
                                             <div class="card-body">
                                                 <h6 class="card-title mb-1">Floret Printed Ivory Skater Dress</h6>
                                                 <div class="stars-rating"><i
@@ -1259,7 +998,8 @@
                                                         class="icofont icofont-close-line"></i></a></span>
                                             <a href="#">
                                                 <span class="badge badge-danger">NEW</span>
-                                                <img src="img/item/3.jpg" class="card-img-top" alt="..."></a>
+                                                <img src="{{ asset('frontend/img/item/3.jpg') }}" class="card-img-top"
+                                                    alt="..."></a>
                                             <div class="card-body">
                                                 <h6 class="card-title mb-1">Floret Printed Ivory Skater Dress</h6>
                                                 <div class="stars-rating"><i
@@ -1281,7 +1021,8 @@
                                                         class="icofont icofont-close-line"></i></a></span>
                                             <a href="#">
                                                 <span class="badge badge-success">50% OFF</span>
-                                                <img src="img/item/4.jpg" class="card-img-top" alt="..."></a>
+                                                <img src="{{ asset('frontend/img/item/4.jpg') }}" class="card-img-top"
+                                                    alt="..."></a>
                                             <div class="card-body">
                                                 <h6 class="card-title mb-1">Floret Printed Ivory Skater Dress</h6>
                                                 <div class="stars-rating"><i
@@ -1302,7 +1043,8 @@
                                                         class="icofont icofont-close-line"></i></a></span>
                                             <a href="#">
                                                 <span class="badge badge-danger">NEW</span>
-                                                <img src="img/item/5.jpg" class="card-img-top" alt="..."></a>
+                                                <img src="{{ asset('frontend/img/item/5.jpg') }}" class="card-img-top"
+                                                    alt="..."></a>
                                             <div class="card-body">
                                                 <h6 class="card-title mb-1">Floret Printed Ivory Skater Dress</h6>
                                                 <div class="stars-rating"><i
@@ -1323,7 +1065,8 @@
                                                         class="icofont icofont-close-line"></i></a></span>
                                             <a href="#">
                                                 <span class="badge badge-success">50% OFF</span>
-                                                <img src="img/item/6.jpg" class="card-img-top" alt="..."></a>
+                                                <img src="{{ asset('frontend/img/item/6.jpg') }}"
+                                                    class="card-img-top" alt="..."></a>
                                             <div class="card-body">
                                                 <h6 class="card-title mb-1">Floret Printed Ivory Skater Dress</h6>
                                                 <div class="stars-rating"><i
@@ -1594,7 +1337,8 @@
                                                                         <td class="cart_product"><a
                                                                                 href="#"><img
                                                                                     class="img-fluid"
-                                                                                    src="img/item/1.jpg" alt></a></td>
+                                                                                    src="{{ asset('frontend/img/item/1.jpg') }}"
+                                                                                    alt></a></td>
                                                                         <td class="cart_description">
                                                                             <h6 class="product-name"><a
                                                                                     href="#">Floret Printed
@@ -1632,7 +1376,8 @@
                                                                         <td class="cart_product"><a
                                                                                 href="#"><img
                                                                                     class="img-fluid"
-                                                                                    src="img/item/2.jpg" alt></a></td>
+                                                                                    src="{{ asset('frontend/img/item/2.jpg') }}"
+                                                                                    alt></a></td>
                                                                         <td class="cart_description">
                                                                             <h6 class="product-name"><a
                                                                                     href="#">Floret Printed
@@ -1670,7 +1415,8 @@
                                                                         <td class="cart_product"><a
                                                                                 href="#"><img
                                                                                     class="img-fluid"
-                                                                                    src="img/item/3.jpg" alt></a></td>
+                                                                                    src="{{ asset('frontend/img/item/3.jpg') }}"
+                                                                                    alt></a></td>
                                                                         <td class="cart_description">
                                                                             <h6 class="product-name"><a
                                                                                     href="#">Floret Printed
@@ -1708,7 +1454,8 @@
                                                                         <td class="cart_product"><a
                                                                                 href="#"><img
                                                                                     class="img-fluid"
-                                                                                    src="img/item/4.jpg" alt></a></td>
+                                                                                    src="{{ asset('frontend/img/item/4.jpg') }}"
+                                                                                    alt></a></td>
                                                                         <td class="cart_description">
                                                                             <h6 class="product-name"><a
                                                                                     href="#">Floret Printed
@@ -1774,139 +1521,6 @@
         </div>
     </section>
 
-    <footer class="bg-white border-bottom border-top">
-        <div class="container">
-            <div class="row no-gutters">
-                <div class="col-md-4">
-                    <div class="border-right py-5 pr-5">
-                        <h6 class="mt-0 mb-4 f-14 text-dark font-weight-bold">TOP CATEGORIES</h6>
-                        <div class="row no-gutters">
-                            <div class="col-6">
-                                <ul class="list-unstyled mb-0">
-                                    <li><a href="#">Dresses for Girls</a></li>
-                                    <li><a href="#">Maxi Dresses</a></li>
-                                    <li><a href="#">Tops for Girls</a></li>
-                                    <li><a href="#">Women Jumpsuits</a></li>
-                                    <li><a href="#">Dungarees Dress</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-6">
-                                <ul class="list-unstyled mb-0">
-                                    <li><a href="#">T Shirts</a></li>
-                                    <li><a href="#">Shoes for Men</a></li>
-                                    <li><a href="#">Ripped Jeans</a></li>
-                                    <li><a href="#">Jeans for Girls</a></li>
-                                    <li><a href="#">Denim shirts</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="border-right py-5 px-5">
-                        <h6 class="mt-0 mb-4 f-14 text-dark font-weight-bold">ABOUT US</h6>
-                        <div class="row no-gutters">
-                            <div class="col-6">
-                                <ul class="list-unstyled mb-0">
-                                    <li><a href="#">History</a></li>
-                                    <li><a href="#">Band of Trust</a></li>
-                                    <li><a href="#">Brand Guidelines</a></li>
-                                    <li><a href="#">TV Commercials</a></li>
-                                    <li><a href="#">In the News
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-6">
-                                <ul class="list-unstyled mb-0">
-                                    <li><a href="#">Awards</a></li>
-                                    <li><a href="#">Terms & Conditions</a></li>
-                                    <li><a href="#">Privacy Policy</a></li>
-                                    <li><a href="#">Careers</a></li>
-                                    <li><a href="#">Offers</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="py-5 pl-5">
-                        <h6 class="mt-0 mb-4 f-14 text-dark font-weight-bold">DOWNLOAD APP</h6>
-                        <div class="app">
-                            <a href="#">
-                                <img class="img-fluid" src="img/google.png">
-                            </a>
-                            <a href="#">
-                                <img class="img-fluid" src="img/apple.png">
-                            </a>
-                        </div>
-                        <h6 class="mt-4 mb-4 f-14 text-dark font-weight-bold">KEEP IN TOUCH</h6>
-                        <div class="footer-social">
-                            <a class="btn-facebook" href="#"><i class="icofont-facebook"></i></a>
-                            <a class="btn-twitter" href="#"><i class="icofont-twitter"></i></a>
-                            <a class="btn-instagram" href="#"><i class="icofont-instagram"></i></a>
-                            <a class="btn-whatsapp" href="#"><i class="icofont-whatsapp"></i></a>
-                            <a class="btn-messenger" href="#"><i class="icofont-facebook-messenger"></i></a>
-                            <a class="btn-google" href="#"><i class="icofont-google-plus"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </footer>
-    <div class="popular-tag py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h6 class="mt-0 mb-4 f-14 text-dark font-weight-bold">POPULAR SEARCHES</h6>
-                    <p class="mb-0">
-                        <a href="#">Makeup</a> &nbsp; | &nbsp; <a href="#">Dresses For Girls</a> &nbsp;
-                        | &nbsp; <a href="#">T-Shirts</a> &nbsp; | &nbsp; <a href="#">Sandals</a> &nbsp;
-                        | &nbsp; <a href="#">Headphones</a> &nbsp; | &nbsp; <a href="#">Babydolls</a>
-                        &nbsp; | &nbsp; <a href="#">Blazers For Men</a> &nbsp; | &nbsp; <a
-                            href="#">Handbags</a> &nbsp; | &nbsp; <a href="#">Ladies Watches</a> &nbsp;
-                        | &nbsp; <a href="#">Bags</a> &nbsp; | &nbsp; <a href="#">Sport Shoes</a> &nbsp;
-                        | &nbsp; <a href="#">Reebok Shoes</a> &nbsp; | &nbsp; <a href="#">Puma Shoes</a>
-                        &nbsp; | &nbsp; <a href="#">Boxers Wallets</a> &nbsp; | &nbsp; <a
-                            href="#">Tops</a> &nbsp; | &nbsp; <a href="#">Earrings</a> &nbsp; | &nbsp;
-                        <a href="#">Fastrack Watches</a> &nbsp; | &nbsp; <a href="#">Nike</a> &nbsp; |
-                        &nbsp; <a href="#">Smart Watches</a> &nbsp; | &nbsp; <a href="#">Cricket
-                            Shoes</a> &nbsp; | &nbsp; <a href="#">Forever 21</a> &nbsp; | &nbsp; <a
-                            href="#">Eye Makeup</a> <a href="#">Photo</a> &nbsp; | &nbsp; <a
-                            href="#">Fashion Show</a> &nbsp; | &nbsp; <a href="#">Lipstick</a> &nbsp; |
-                        &nbsp; <a href="#">Dresses</a> &nbsp; | &nbsp; <a href="#">Nike Shoes</a> &nbsp;
-                        | &nbsp; <a href="#">Goggles</a> &nbsp; | &nbsp; <a href="#">Suit Chinos</a>
-                        &nbsp; | &nbsp; <a href="#">Adidas Shoes</a> &nbsp; | &nbsp; <a
-                            href="#">Woodland Shoes</a> &nbsp; | &nbsp; <a href="#">Boxers Wallets</a>
-                        &nbsp; | &nbsp; <a href="#">Tops</a> &nbsp; | &nbsp; <a href="#">Earrings</a>
-                        &nbsp; | &nbsp; <a href="#">Fastrack Watches</a> &nbsp; | &nbsp; <a
-                            href="#">Nike</a> &nbsp; | &nbsp; <a href="#">Smart Watches</a> &nbsp; |
-                        &nbsp; <a href="#">Cricket Shoes</a> &nbsp; | &nbsp; <a href="#">Forever 21</a>
-                        &nbsp; | &nbsp; <a href="#">Eye Makeup</a> <a href="#">Photo</a> &nbsp; | &nbsp;
-                        <a href="#">Fashion Show</a> &nbsp; | &nbsp; <a href="#">Lipstick</a> &nbsp; |
-                        &nbsp; <a href="#">Dresses</a> &nbsp; | &nbsp; <a href="#">Nike Shoes</a> &nbsp;
-                        | &nbsp; <a href="#">Goggles</a> &nbsp; | &nbsp; <a href="#">Suit Chinos</a>
-                        &nbsp; | &nbsp; <a href="#">Adidas Shoes</a> &nbsp; | &nbsp; <a
-                            href="#">Woodland Shoes</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="copyright bg-light py-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 d-flex align-items-center">
-                    <p class="mb-0">© Copyright 2019 <a href="#">Chpoee</a> . All Rights Reserved
-                    </p>
-                </div>
-                <div class="col-md-6 text-right">
-                    <img class="img-fluid" src="img/payment_methods.png">
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="cart-sidebar">
         <div class="cart-sidebar-header">
             <h5>
@@ -1919,7 +1533,7 @@
             <div class="cart-list-product">
                 <a class="float-right remove-cart" href="#"><i
                         class="icofont icofont-close-circled"></i></a>
-                <img class="img-fluid" src="img/item/1.jpg" alt>
+                <img class="img-fluid" src="{{ asset('frontend/img/item/1.jpg') }}" alt>
                 <span class="badge badge-success">50% OFF</span>
                 <h5><a href="#">Floret Printed Ivory Skater Dress</a></h5>
                 <div class="stars-rating"><i class="icofont icofont-star active"></i><i
@@ -1940,7 +1554,7 @@
             <div class="cart-list-product">
                 <a class="float-right remove-cart" href="#"><i
                         class="icofont icofont-close-circled"></i></a>
-                <img class="img-fluid" src="img/item/2.jpg" alt>
+                <img class="img-fluid" src="{{ asset('frontend/img/item/2.jpg') }}" alt>
                 <span class="badge badge-danger">55% OFF</span>
                 <h5><a href="#">Floret Printed Ivory Skater Dress</a></h5>
                 <div class="stars-rating"><i class="icofont icofont-star active"></i><i
@@ -1962,7 +1576,7 @@
             <div class="cart-list-product">
                 <a class="float-right remove-cart" href="#"><i
                         class="icofont icofont-close-circled"></i></a>
-                <img class="img-fluid" src="img/item/3.jpg" alt>
+                <img class="img-fluid" src="{{ asset('frontend/img/item/3.jpg') }}" alt>
                 <span class="badge badge-info">NEW</span>
                 <h5><a href="#">Floret Printed Ivory Skater Dress</a></h5>
                 <div class="stars-rating"><i class="icofont icofont-star active"></i><i
@@ -1984,7 +1598,7 @@
             <div class="cart-list-product">
                 <a class="float-right remove-cart" href="#"><i
                         class="icofont icofont-close-circled"></i></a>
-                <img class="img-fluid" src="img/item/4.jpg" alt>
+                <img class="img-fluid" src="{{ asset('frontend/img/item/4.jpg') }}" alt>
                 <span class="badge badge-danger">NEW</span>
                 <h5><a href="#">Floret Printed Ivory Skater Dress</a></h5>
                 <div class="stars-rating"><i class="icofont icofont-star active"></i><i
@@ -2006,7 +1620,7 @@
             <div class="cart-list-product">
                 <a class="float-right remove-cart" href="#"><i
                         class="icofont icofont-close-circled"></i></a>
-                <img class="img-fluid" src="img/item/5.jpg" alt>
+                <img class="img-fluid" src="{{ asset('frontend/img/item/5.jpg') }}" alt>
                 <span class="badge badge-info">NEW</span>
                 <h5><a href="#">Floret Printed Ivory Skater Dress</a></h5>
                 <div class="stars-rating"><i class="icofont icofont-star active"></i><i
@@ -2038,27 +1652,4 @@
                             class="icofont icofont-bubble-right"></span></span></button></a>
         </div>
     </div>
-
-    <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script src="vendor/jquery/jquery.min.js" type="bef35915e8432d98485f6668-text/javascript"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js" type="bef35915e8432d98485f6668-text/javascript"></script>
-
-    <script src="vendor/select2/js/select2.min.js" type="bef35915e8432d98485f6668-text/javascript"></script>
-
-    <script src="vendor/owl-carousel/owl.carousel.js" type="bef35915e8432d98485f6668-text/javascript"></script>
-
-    <link href="vendor/datatables/datatables.min.css" rel="stylesheet" />
-    <script src="vendor/datatables/datatables.min.js" type="bef35915e8432d98485f6668-text/javascript"></script>
-
-    <script src="js/custom.js" type="bef35915e8432d98485f6668-text/javascript"></script>
-    <script src="../../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js"
-        data-cf-settings="bef35915e8432d98485f6668-|49" defer></script>
-    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v52afc6f149f6479b8c77fa569edb01181681764108816"
-        integrity="sha512-jGCTpDpBAYDGNYR5ztKt4BQPGef1P0giN6ZGVUi835kFF88FOmmn8jBQWNgrNd8g/Yu421NdgWhwQoaOPFflDw=="
-        data-cf-beacon='{"rayId":"7d2f15b6cf65483a","version":"2023.4.0","r":1,"b":1,"token":"dd471ab1978346bbb991feaa79e6ce5c","si":100}'
-        crossorigin="anonymous"></script>
-</body>
-
-<!-- Mirrored from askbootstrap.com/preview/chpoee/profile.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 06 Jun 2023 07:54:28 GMT -->
-
-</html>
+</x-guest-layout>

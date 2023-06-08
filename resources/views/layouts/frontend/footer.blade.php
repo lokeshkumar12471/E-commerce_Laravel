@@ -245,9 +245,9 @@
             <p>Delivery Charges <strong class="float-right text-danger">+ $29.69</strong></p>
             <h6>Your total savings <strong class="float-right text-danger">$55 (42.31%)</strong></h6>
         </div>
-        <a href="checkout.html"><button class="btn btn-primary btn-lg btn-block text-left" type="button"><span
-                    class="float-left"><i class="icofont icofont-cart"></i> Proceed to Checkout </span><span
-                    class="float-right"><strong>$1200.69</strong> <span
+        <a href="{{ route('checkout') }}"><button class="btn btn-primary btn-lg btn-block text-left"
+                type="button"><span class="float-left"><i class="icofont icofont-cart"></i> Proceed to Checkout
+                </span><span class="float-right"><strong>$1200.69</strong> <span
                         class="icofont icofont-bubble-right"></span></span></button></a>
     </div>
 </div>

@@ -473,7 +473,7 @@
                                         class="icofont-file-document"></i> Order Status</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('/') }}"><i class="icofont-logout"></i>
+                                <a class="nav-link" href="{{ route('logout') }}"><i class="icofont-logout"></i>
                                     Logout</a>
                             </li>
                         </ul>

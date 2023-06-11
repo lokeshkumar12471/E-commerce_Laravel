@@ -49,8 +49,9 @@
         integrity="sha512-jGCTpDpBAYDGNYR5ztKt4BQPGef1P0giN6ZGVUi835kFF88FOmmn8jBQWNgrNd8g/Yu421NdgWhwQoaOPFflDw=="
         data-cf-beacon='{"rayId":"7d2f1579dcac3de8","version":"2023.4.0","r":1,"b":1,"token":"dd471ab1978346bbb991feaa79e6ce5c","si":100}'
         crossorigin="anonymous"></script>
-    <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script src="{{asset('js/jqBootstrapValidation.js')}}" type="1ca3e1fae7bcee821cfb7c9d-text/javascript"></script>
+    <script data-cfasync="false"
+        src="{{ asset('frontend/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js') }}"></script>
+    <script src="{{asset('frontend/js/jqBootstrapValidation.js')}}" type="1ca3e1fae7bcee821cfb7c9d-text/javascript"></script>
     <script src="{{asset('frontend/js/contact_me.js')}}" type="1ca3e1fae7bcee821cfb7c9d-text/javascript"></script>
     <link href="{{ asset('frontend/vendor/datatables/datatables.min.css') }}" rel="stylesheet" />
     <script src="{{asset('frontend/vendor/datatables/datatables.min.js')}}" type="bef35915e8432d98485f6668-text/javascript"></script>

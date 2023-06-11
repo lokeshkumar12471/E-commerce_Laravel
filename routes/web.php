@@ -1,4 +1,6 @@
 <?php
+
+use App\Http\Controllers\Frontend\AuthController;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\AboutController;
@@ -24,7 +26,7 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/',[HomeController::class,'index'])->name('/');
+Route::get('/',[HomeController::class,'index'])->name('home');
 Route::get('contact',[ContactController::class,'index'])->name('contact');
 Route::get('about',[AboutController::class,'index'])->name('about');
 Route::get('productlist',[ProductListController::class,'index'])->name('productlist');
@@ -33,3 +35,7 @@ Route::get('checkout',[CheckoutController::class,'index'])->name('checkout');
 Route::get('profile',[ProfileController::class,'index'])->name('profile');
 Route::get('faq',[FaqController::class,'index'])->name('faq');
 Route::get('cart',[CartController::class,'index'])->name('cart');
+Route::get('login/register',[AuthController::class,'index'])->name('login_register');
+Route::post('post-login',[AuthController::class,'postLogin'])->name('post_login');
+Route::post('post-register',[AuthController::class,'postRegistration'])->name('post_register');
+Route::get('logout',[AuthController::class,'logout'])->name('logout');

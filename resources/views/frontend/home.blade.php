@@ -219,11 +219,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-6">
-                    <div class="offers-block"><a href="#"><img class="img-fluid" src="img/ad/1.png" alt></a>
+                    <div class="offers-block"><a href="#"><img class="img-fluid"
+                                src="{{ asset('frontend/img/ad/1.png') }}" alt></a>
                     </div>
                 </div>
                 <div class="col-6">
-                    <div class="offers-block"><a href="#"><img class="img-fluid" src="img/ad/2.png" alt></a>
+                    <div class="offers-block"><a href="#"><img class="img-fluid"
+                                src="{{ asset('frontend/img/ad/2.png') }}" alt></a>
                     </div>
                 </div>
             </div>

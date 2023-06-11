@@ -403,7 +403,7 @@
                             </div>
                         </div>
                         <h5 class="mb-1 text-dark">Topwear</h5>
-                        <a href="{{ route('/') }}"><span class="icofont icofont-ui-home"></span> Home</a> <span
+                        <a href="{{ route('home') }}"><span class="icofont icofont-ui-home"></span> Home</a> <span
                             class="icofont icofont-thin-right"></span> <a href="#">Topwear</a> <span
                             class="icofont icofont-thin-right"></span> <span>Sweatshirts</span>
                     </div>

@@ -8,7 +8,7 @@
                 </div>
                 <div class="col-lg-6 col-md-6 text-right">
                     <div class="breadcrumbs">
-                        <p class="mb-0"><a href="{{ route('/') }}"><i class="icofont-ui-home"></i> Home</a> /
+                        <p class="mb-0"><a href="{{ route('home') }}"><i class="icofont-ui-home"></i> Home</a> /
                             <span>FAQ</span>
                         </p>
                     </div>

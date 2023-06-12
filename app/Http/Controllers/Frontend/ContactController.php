@@ -12,6 +12,6 @@ class ContactController extends Controller
         if(Auth::check()){
         return view('frontend.contact');
     }
-    return view('frontend.auth')->with('Opps! You do not have access');
+    return redirect()->route('login_register')->with('error','Opps! You do not have access, Until Login');
 }
 }

@@ -11,7 +11,6 @@ use App\Models\User;
 
 class AuthController extends Controller
 {
-
 public function index(){
     return view('frontend.auth');
 }
@@ -47,12 +46,12 @@ return redirect()->route('home')->with('success','Successfully Registered!');
             // Authentication passed...
             return redirect()->route('home')->with('success','You Successfully Loggedin!');
         }
-        return redirect()->route('home')->with('error','Oppes! You Have Entered invalid credentials');
+        return redirect()->route('login_register')->with('error','Oppes! You Have Entered invalid credentials');
     }
 
     public function logout() {
         Session::flush();
         Auth::logout();
-        return redirect()->route('home')->with('success','Successfully LogOut!');
+        return redirect()->route('login_register')->with('success','Successfully LogOut!');
     }
 }

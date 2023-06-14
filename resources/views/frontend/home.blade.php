@@ -46,6 +46,49 @@
             </div>
         </div>
     </section>
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="{{ asset('frontend/img/women.jpg') }}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Women</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore,
+                                numquam natus beatae distinctio! Minus, esse!</p>
+                            <a href="{{ route('productlist', ['category' => 'women']) }}" class="btn btn-primary">View
+                                Offers</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="{{ asset('frontend/img/men.jpg') }}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Men</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore,
+                                numquam natus beatae distinctio! Minus, esse!</p>
+                            <a href="{{ route('productlist', ['category' => 'men']) }}" class="btn btn-primary">View
+                                Offers</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="{{ asset('frontend/img/kids.jpg') }}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Kids</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore,
+                                numquam natus beatae distinctio! Minus, esse!</p>
+                            <a href="{{ route('productlist', ['category' => 'kids']) }}" class="btn btn-primary">View
+                                Offers</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="product-list pbc-5 pb-4 pt-5 bg-light">
         <div class="container">
             <h6 class="mt-1 mb-0 float-right"><a href="#">View All Items</a></h6>
@@ -75,7 +118,8 @@
                         <span class="like-icon"><a href="#"> <i class="icofont icofont-heart"></i></a></span>
                         <a href="#">
                             <span class="badge badge-success">50% OFF</span>
-                            <img src="{{ asset('frontend/img/item/2.jpg') }}" class="card-img-top" alt="..."></a>
+                            <img src="{{ asset('frontend/img/item/2.jpg') }}" class="card-img-top"
+                                alt="..."></a>
                         <div class="card-body">
                             <h6 class="card-title mb-1">Floret Printed Ivory Skater Dress</h6>
                             <div class="stars-rating"><i class="icofont icofont-star active"></i><i
@@ -96,7 +140,8 @@
                                     class="icofont icofont-heart"></i></a></span>
                         <a href="#">
                             <span class="badge badge-danger">NEW</span>
-                            <img src="{{ asset('frontend/img/item/3.jpg') }}" class="card-img-top" alt="..."></a>
+                            <img src="{{ asset('frontend/img/item/3.jpg') }}" class="card-img-top"
+                                alt="..."></a>
                         <div class="card-body">
                             <h6 class="card-title mb-1">Floret Printed Ivory Skater Dress</h6>
                             <div class="stars-rating"><i class="icofont icofont-star active"></i><i

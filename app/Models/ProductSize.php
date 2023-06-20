@@ -18,13 +18,13 @@ class ProductSize extends Model
     'seller_name',
     'seller_contact_number',
 ];
-public function product_categories()
+public function productCategory()
 {
     return $this->belongsTo(ProductCategory::class);
 }
 
-public function product_sub_categories()
+public function productSubCategory()
 {
-    return $this->belongsTo(ProductSubCategory::class, 'subcategory_id');
-}
+        return $this->belongsTo(ProductSubCategory::class, 'subcategory_id');
+    }
 }

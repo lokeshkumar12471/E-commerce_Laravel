@@ -58,10 +58,10 @@
                     <h6 class="mt-0 mb-4 f-14 text-dark font-weight-bold">DOWNLOAD APP</h6>
                     <div class="app">
                         <a href="#">
-                            <img class="img-fluid" src="frontend/img/google.png">
+                            <img class="img-fluid" src="{{ asset('frontend/img/google.png') }}">
                         </a>
                         <a href="#">
-                            <img class="img-fluid" src="frontend/img/apple.png">
+                            <img class="img-fluid" src="{{ asset('frontend/img/apple.png') }}">
                         </a>
                     </div>
                     <h6 class="mt-4 mb-4 f-14 text-dark font-weight-bold">KEEP IN TOUCH</h6>
@@ -130,7 +130,7 @@
                 </p>
             </div>
             <div class="col-md-6 text-right">
-                <img class="img-fluid" src="frontend/img/payment_methods.png">
+                <img class="img-fluid" src="{{ asset('frontend/img/payment_methods.png') }}">
             </div>
         </div>
     </div>

@@ -29,7 +29,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[HomeController::class,'index'])->name('home');
 Route::get('contact',[ContactController::class,'index'])->name('contact');
 Route::get('about',[AboutController::class,'index'])->name('about');
-Route::get('productlist',[ProductListController::class,'index'])->name('productlist');
+Route::get('productlist', [ProductListController::class, 'index'])->name('productlist');
 Route::get('productdetail',[ProductDetailController::class,'index'])->name('productdetail');
 Route::get('checkout',[CheckoutController::class,'index'])->name('checkout');
 Route::get('profile',[ProfileController::class,'index'])->name('profile');

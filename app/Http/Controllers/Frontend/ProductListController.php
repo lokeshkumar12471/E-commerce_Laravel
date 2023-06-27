@@ -7,10 +7,11 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use App\Models\ProductSize;
 
+
 class ProductListController extends Controller
 {
-    public function index(){
-         $productlist=ProductSize::get();
+    public function index($category){
+         $productlist=ProductSize::where('category_id',$category)->get();
         if(Auth::check()){
         return view('frontend.productlist',compact('productlist'));
     }

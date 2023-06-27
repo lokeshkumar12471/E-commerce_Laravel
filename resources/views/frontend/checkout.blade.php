@@ -550,154 +550,54 @@
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr>
-                                                            <td class="cart_product"><a href="#"><img
-                                                                        class="img-fluid"
-                                                                        src="{{ asset('frontend/img/item/1.jpg') }}"
-                                                                        alt></a>
-                                                            </td>
-                                                            <td class="cart_description">
-                                                                <h6 class="product-name"><a href="#">Floret
-                                                                        Printed Ivory Skater Dress </a></h6>
-                                                                <p class="f-12 text-secondary mb-1 pt-1 pb-1">5/4
-                                                                    Review</p>
-                                                                <hr>
-                                                                <a class="text-info" href="#"><i
-                                                                        class="icofont-heart"></i> Move to
-                                                                    Shortlist</a> &nbsp; &nbsp; <a class="text-danger"
-                                                                    href="#"><i class="icofont-trash"></i>
-                                                                    Remove Item</a>
-                                                            </td>
-                                                            <td>
-                                                                <p class="text-secondary"><i
-                                                                        class="icofont-check-circled"></i> 17 Aug to 19
-                                                                    Aug <span class="text-dark">+$. 49</span></p>
-                                                            </td>
-                                                            <td class="qty">
-                                                                <select class="custom-select custom-select-sm">
-                                                                    <option selected>1</option>
-                                                                    <option value="1">2</option>
-                                                                    <option value="2">3</option>
-                                                                    <option value="3">4</option>
-                                                                </select>
-                                                            </td>
-                                                            <td class="price">
-                                                                <p class="f-14 mb-0 text-dark">$250.00<br> <del
-                                                                        class="small text-secondary">$ 500.00 </del>
-                                                                </p>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="cart_product"><a href="#"><img
-                                                                        class="img-fluid"
-                                                                        src="{{ asset('frontend/img/item/2.jpg') }}"
-                                                                        alt></a>
-                                                            </td>
-                                                            <td class="cart_description">
-                                                                <h6 class="product-name"><a href="#">Floret
-                                                                        Printed Ivory Skater Dress </a></h6>
-                                                                <p class="f-12 text-secondary mb-1 pt-1 pb-1">5/4
-                                                                    Review</p>
-                                                                <hr>
-                                                                <a class="text-info" href="#"><i
-                                                                        class="icofont-heart"></i> Move to
-                                                                    Shortlist</a> &nbsp; &nbsp; <a class="text-danger"
-                                                                    href="#"><i class="icofont-trash"></i>
-                                                                    Remove Item</a>
-                                                            </td>
-                                                            <td>
-                                                                <p class="text-secondary"><i
-                                                                        class="icofont-check-circled"></i> 17 Aug to 19
-                                                                    Aug <span class="text-dark">+$. 49</span></p>
-                                                            </td>
-                                                            <td class="qty">
-                                                                <select class="custom-select custom-select-sm">
-                                                                    <option selected>1</option>
-                                                                    <option value="1">2</option>
-                                                                    <option value="2">3</option>
-                                                                    <option value="3">4</option>
-                                                                </select>
-                                                            </td>
-                                                            <td class="price">
-                                                                <p class="f-14 mb-0 text-dark">$250.00 <br><del
-                                                                        class="small text-secondary">$ 500.00 </del>
-                                                                </p>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="cart_product"><a href="#"><img
-                                                                        class="img-fluid"
-                                                                        src="{{ asset('frontend/img/item/3.jpg') }}"
-                                                                        alt></a>
-                                                            </td>
-                                                            <td class="cart_description">
-                                                                <h6 class="product-name"><a href="#">Floret
-                                                                        Printed Ivory Skater Dress </a></h6>
-                                                                <p class="f-12 text-secondary mb-1 pt-1 pb-1">5/4
-                                                                    Review</p>
-                                                                <hr>
-                                                                <a class="text-info" href="#"><i
-                                                                        class="icofont-heart"></i> Move to
-                                                                    Shortlist</a> &nbsp; &nbsp; <a class="text-danger"
-                                                                    href="#"><i class="icofont-trash"></i>
-                                                                    Remove Item</a>
-                                                            </td>
-                                                            <td>
-                                                                <p class="text-secondary"><i
-                                                                        class="icofont-check-circled"></i> 17 Aug to 19
-                                                                    Aug <span class="text-dark">+$. 49</span></p>
-                                                            </td>
-                                                            <td class="qty">
-                                                                <select class="custom-select custom-select-sm">
-                                                                    <option selected>1</option>
-                                                                    <option value="1">2</option>
-                                                                    <option value="2">3</option>
-                                                                    <option value="3">4</option>
-                                                                </select>
-                                                            </td>
-                                                            <td class="price">
-                                                                <p class="f-14 mb-0 text-dark">$250.00<br><del
-                                                                        class="small text-secondary">$ 500.00 </del>
-                                                                </p>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="cart_product"><a href="#"><img
-                                                                        class="img-fluid"
-                                                                        src="{{ asset('frontend/img/item/4.jpg') }}"
-                                                                        alt></a>
-                                                            </td>
-                                                            <td class="cart_description">
-                                                                <h6 class="product-name"><a href="#">Floret
-                                                                        Printed Ivory Skater Dress </a></h6>
-                                                                <p class="f-12 text-secondary mb-1 pt-1 pb-1">5/4
-                                                                    Review</p>
-                                                                <hr>
-                                                                <a class="text-info" href="#"><i
-                                                                        class="icofont-heart"></i> Move to
-                                                                    Shortlist</a> &nbsp; &nbsp; <a class="text-danger"
-                                                                    href="#"><i class="icofont-trash"></i>
-                                                                    Remove Item</a>
-                                                            </td>
-                                                            <td>
-                                                                <p class="text-secondary"><i
-                                                                        class="icofont-check-circled"></i> 17 Aug to 19
-                                                                    Aug <span class="text-dark">+$. 49</span></p>
-                                                            </td>
-                                                            <td class="qty">
-                                                                <select class="custom-select custom-select-sm">
-                                                                    <option selected>1</option>
-                                                                    <option value="1">2</option>
-                                                                    <option value="2">3</option>
-                                                                    <option value="3">4</option>
-                                                                </select>
-                                                            </td>
-                                                            <td class="price">
-                                                                <p class="f-14 mb-0 text-dark">$250.00 <br><del
-                                                                        class="small text-secondary">$ 500.00 </del>
-                                                                </p>
-                                                            </td>
-                                                        </tr>
+                                                        <input type="hidden" value="{{ $price = 0 }}" />
+                                                        @foreach ($checkout as $checkoutdetails)
+                                                            <tr>
+                                                                <td class="cart_product"><a href="#"><img
+                                                                            class="img-fluid"
+                                                                            src="{{ asset($checkoutdetails->product_image) }}"
+                                                                            alt></a>
+                                                                </td>
+                                                                <td class="cart_description">
+                                                                    <h6 class="product-name"><a
+                                                                            href="#">{{ $checkoutdetails->product_name }}</a>
+                                                                    </h6>
+                                                                    <p class="f-12 text-secondary mb-1 pt-1 pb-1">5/4
+                                                                        Review</p>
+                                                                    <hr>
+                                                                    <a class="text-info" href="#"><i
+                                                                            class="icofont-heart"></i> Move to
+                                                                        Shortlist</a> &nbsp; &nbsp; <a
+                                                                        class="text-danger" href="#"><i
+                                                                            class="icofont-trash"
+                                                                            onclick="deleteFromCart('{{ $checkoutdetails->id }}')"></i>
+                                                                        Remove Item</a>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="text-secondary"><i
+                                                                            class="icofont-check-circled"></i> 17 Aug
+                                                                        to 19
+                                                                        Aug <span class="text-dark">+$. 49</span></p>
+                                                                </td>
+                                                                <td class="qty">
+                                                                    <select class="custom-select custom-select-sm">
+                                                                        <option selected>1</option>
+                                                                        <option value="1">2</option>
+                                                                        <option value="2">3</option>
+                                                                        <option value="3">4</option>
+                                                                    </select>
+                                                                </td>
+                                                                <td class="price">
+                                                                    <p class="f-14 mb-0 text-dark">
+                                                                        ${{ $checkoutdetails->product_price }}<br><del
+                                                                            class="small text-secondary">$ 500.00
+                                                                        </del>
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+                                                            <input type="hidden"
+                                                                value="{{ $price += $checkoutdetails->product_price }}" />
+                                                        @endforeach
                                                     </tbody>
                                                     <tfoot>
                                                         <tr>
@@ -736,8 +636,8 @@
                                                 type="button"><span class="float-left"><i
                                                         class="icofont icofont-cart"></i> PROCEED TO
                                                     PAYMENT
-                                                </span><span class="float-right"><strong>$1200.69</strong> <span
-                                                        class="icofont icofont-bubble-right"></span></span></button>
+                                                </span><span class="float-right"><strong>${{ $price }}</strong>
+                                                    <span class="icofont icofont-bubble-right"></span></span></button>
                                         </div>
                                     </div>
                                 </div>
@@ -1016,61 +916,37 @@
                 </div>
                 <div class="col-md-4">
                     <div class="osahan-cart-item">
-                        <h5 class="mb-3 mt-0 text-dark">Summary <span class="small text-success">(5 Item)</span>
+                        <h5 class="mb-3 mt-0 text-dark">Summary <span class="small text-success">({{ $checkcount }}
+                                Item)</span>
                         </h5>
                         <div class="bg-white rounded shadow-sm mb-3">
-                            <div class="cart-list-product">
-                                <a class="float-right remove-cart" href="#"><i
-                                        class="icofont icofont-close-circled"></i></a>
-                                <img class="img-fluid" src="{{ asset('frontend/img/item/1.jpg') }}" alt>
-                                <span class="badge badge-success">50% OFF</span>
-                                <h5><a href="#">Floret Printed Ivory Skater Dress</a></h5>
-                                <div class="stars-rating"><i class="icofont icofont-star active"></i><i
-                                        class="icofont icofont-star active"></i><i
-                                        class="icofont icofont-star active"></i><i
-                                        class="icofont icofont-star active"></i><i class="icofont icofont-star"></i>
-                                    <span>613</span>
+                            <input type="hidden" value="{{ $price = 0 }}" />
+                            @foreach ($checkout as $checkoutdetails)
+                                <div class="cart-list-product">
+                                    <a class="float-right remove-cart" href="#"
+                                        onclick="deleteFromCart('{{ $checkoutdetails->id }}')"><i
+                                            class="icofont icofont-close-circled"></i></a>
+                                    <img class="img-fluid" src="{{ asset($checkoutdetails->product_image) }}" alt>
+                                    <span class="badge badge-success">50% OFF</span>
+                                    <h5><a href="#">{{ $checkoutdetails->product_name }}</a></h5>
+                                    <div class="stars-rating"><i class="icofont icofont-star active"></i><i
+                                            class="icofont icofont-star active"></i><i
+                                            class="icofont icofont-star active"></i><i
+                                            class="icofont icofont-star active"></i><i
+                                            class="icofont icofont-star"></i>
+                                        <span>613</span>
+                                    </div>
+                                    <p class="f-14 mb-0 text-dark float-right">
+                                        {{ $checkoutdetails->product_price }}<del class="small text-secondary">$
+                                            500.00 </del></p>
+                                    <p class="f-12 text-secondary float-left quantity-text">Quantity: 1</p>
                                 </div>
-                                <p class="f-14 mb-0 text-dark float-right">$135.00 <del class="small text-secondary">$
-                                        500.00 </del></p>
-                                <p class="f-12 text-secondary float-left quantity-text">Quantity: 1</p>
-                            </div>
-                            <div class="cart-list-product">
-                                <a class="float-right remove-cart" href="#"><i
-                                        class="icofont icofont-close-circled"></i></a>
-                                <img class="img-fluid" src="{{ asset('frontend/img/item/2.jpg') }}" alt>
-                                <span class="badge badge-danger">55% OFF</span>
-                                <h5><a href="#">Floret Printed Ivory Skater Dress</a></h5>
-                                <div class="stars-rating"><i class="icofont icofont-star active"></i><i
-                                        class="icofont icofont-star active"></i><i
-                                        class="icofont icofont-star active"></i><i
-                                        class="icofont icofont-star active"></i><i class="icofont icofont-star"></i>
-                                    <span>613</span>
-                                </div>
-                                <p class="f-14 mb-0 text-dark float-right">$250.00 <del class="small text-secondary">$
-                                        500.00 </del> <span
-                                        class="bg-info rounded-sm pl-1 ml-1 pr-1 text-white small">NEW</span> </p>
-                                <p class="f-12 text-secondary float-left quantity-text">Quantity: 1</p>
-                            </div>
-                            <div class="cart-list-product border-0">
-                                <a class="float-right remove-cart" href="#"><i
-                                        class="icofont icofont-close-circled"></i></a>
-                                <img class="img-fluid" src="{{ asset('frontend/img/item/3.jpg') }}" alt>
-                                <span class="badge badge-info">NEW</span>
-                                <h5><a href="#">Floret Printed Ivory Skater Dress</a></h5>
-                                <div class="stars-rating"><i class="icofont icofont-star active"></i><i
-                                        class="icofont icofont-star active"></i><i
-                                        class="icofont icofont-star active"></i><i
-                                        class="icofont icofont-star active"></i><i class="icofont icofont-star"></i>
-                                    <span>613</span>
-                                </div>
-                                <p class="f-14 mb-0 text-dark float-right">$900.00 <del class="small text-secondary">$
-                                        500.00 </del></p>
-                                <p class="f-12 text-secondary float-left quantity-text">Quantity: 1</p>
-                            </div>
+                                <input type="hidden" value="{{ $price += $checkoutdetails->product_price }}" />
+                            @endforeach
                         </div>
+
                         <div class="mb-3 bg-white rounded shadow-sm p-3 clearfix">
-                            <p class="mb-1">Item Total <span class="float-right text-dark">$3140</span></p>
+                            {{-- <p class="mb-1">Item Total <span class="float-right text-dark">$3140</span></p>
                             <p class="mb-1">GST Charges 10% <span class="float-right text-dark">$62.8</span></p>
                             <p class="mb-1">Delivery Fee <span class="text-info" data-toggle="tooltip"
                                     data-placement="top" title="Total discount breakup">
@@ -1079,10 +955,10 @@
                             </p>
                             <p class="mb-1 text-info">Total Discount
                                 <span class="float-right text-info">$1884</span>
-                            </p>
+                            </p> --}}
                             <hr />
-                            <h6 class="font-weight-bold text-danger mb-0">TO PAY <span
-                                    class="float-right">$1329</span>
+                            <h6 class="font-weight-bold text-danger mb-0">TO PAY <span class="float-right">
+                                    ${{ $price }}</span>
                             </h6>
                         </div>
                     </div>
@@ -1166,8 +1042,7 @@
                 </span>
             </div>
             <div class="cart-list-product">
-                <a class="float-right remove-cart" href="#"><i
-                        class="icofont icofont-close-circled"></i></a>
+                <a class="float-right remove-cart" href="#"><i class="icofont icofont-close-circled"></i></a>
                 <img class="img-fluid" src="{{ asset('frontend/img/item/4.jpg') }}" alt>
                 <span class="badge badge-danger">NEW</span>
                 <h5><a href="#">Floret Printed Ivory Skater Dress</a></h5>
@@ -1188,8 +1063,7 @@
                 </span>
             </div>
             <div class="cart-list-product">
-                <a class="float-right remove-cart" href="#"><i
-                        class="icofont icofont-close-circled"></i></a>
+                <a class="float-right remove-cart" href="#"><i class="icofont icofont-close-circled"></i></a>
                 <img class="img-fluid" src="{{ asset('frontend/img/item/5.jpg') }}" alt>
                 <span class="badge badge-info">NEW</span>
                 <h5><a href="#">Floret Printed Ivory Skater Dress</a></h5>

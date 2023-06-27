@@ -12,7 +12,11 @@ use App\Models\User;
 class AuthController extends Controller
 {
 public function index(){
+    if(!Auth::check()){
     return view('frontend.auth');
+    }else{
+        return redirect()->route('home')->with('success','You Already Login!');
+    }
 }
 
 public function postRegistration(Request $request){
@@ -40,11 +44,11 @@ return redirect()->route('home')->with('success','Successfully Registered!');
         'email' => 'required',
         'password' => 'required',
         ]);
-
         $credentials = $request->only('email', 'password');
+        $sessionvalue = User::where('email',$request->email)->get();
         if (Auth::attempt($credentials)) {
-            // Authentication passed...
-            return redirect()->route('home')->with('success','You Successfully Loggedin!');
+          session(['userid' => $sessionvalue[0]->id]);
+        return redirect()->route('home')->with('success','You Successfully Loggedin!');
         }
         return redirect()->route('login_register')->with('error','Oppes! You Have Entered invalid credentials');
     }

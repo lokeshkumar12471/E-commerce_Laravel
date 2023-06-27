@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+
 class ProductSize extends Model
 {
     use HasFactory;
@@ -23,7 +24,7 @@ public function productCategory()
     return $this->belongsTo(ProductCategory::class);
 }
 
-public function productSubCategory()
+      public function productSubCategory()
 {
         return $this->belongsTo(ProductSubCategory::class, 'subcategory_id');
     }

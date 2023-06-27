@@ -408,90 +408,45 @@
                             class="icofont icofont-thin-right"></span> <span>Sweatshirts</span>
                     </div>
                     <div class="row">
-                        {{-- @foreach ($productlist as $products)
+                        @foreach ($productlist as $product)
                             <div class="col-6 col-md-4">
                                 <div
                                     class="card list-item bg-white rounded overflow-hidden position-relative shadow-sm">
-                                    <span class="like-icon"><a href="#"> <i
+                                    <span class="like-icon"><a href="#"><i
                                                 class="icofont icofont-heart"></i></a></span>
                                     <a href="#">
                                         <span class="badge badge-danger">NEW</span>
-                                        <img src="{{ asset($products->product_images) }}" class="card-img-top"
-                                            alt="..."></a>
+                                        <img src="{{ asset($product->product_images) }}" class="card-img-top"
+                                            alt="...">
+                                    </a>
                                     <div class="card-body">
-
                                         <h6 class="card-title mb-1">
-                                            {{ $products->product_sub_categories->sub_category_name }}
+                                            {{ $product->productSubCategory->sub_category_name }}
                                         </h6>
-                                        <div class="stars-rating"><i class="icofont icofont-star active"></i><i
-                                                class="icofont icofont-star active"></i><i
-                                                class="icofont icofont-star active"></i><i
-                                                class="icofont icofont-star active"></i><i
-                                                class="icofont icofont-star"></i>
-                                            <span>613</span><br />
-                                            <select name="size">
-                                                <?php
-                                                $sizes = explode(',', $products['size']);
-                                                foreach ($sizes as $size):
-                                                ?>
-                                                <option value="{{ $size }}">{{ $size }}</option>
-                                                <?php endforeach; ?>
+                                        <div class="stars-rating">
+                                            {{-- <i class="icofont icofont-star active"></i>
+                        <i class="icofont icofont-star active"></i>
+                        <i class="icofont icofont-star active"></i>
+                        <i class="icofont icofont-star active"></i>
+                        <i class="icofont icofont-star"></i>
+                        <span>613</span><br /> --}}
+                                            <select name="size" id="sizeSelect{{ $product->id }}">
+                                                <option value="" selected disabled>Select Size</option>
+                                                @foreach (explode(',', $product->size) as $size)
+                                                    <option value="{{ $size }}">{{ $size }}</option>
+                                                @endforeach
                                             </select>
                                         </div>
-                                        <p class="mb-0 text-dark">{{ $products->price }} <span
-                                                class="text-black-50"><del>$500.00
-                                                </del></span></p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <p class="mb-0 text-dark">{{ $product->price }}</p>
+                                            <button class="btn btn-danger"
+                                                onclick="addProduct('{{ $product->product_images }}', '{{ $product->productSubCategory->sub_category_name }}', {{ $product->price }}, {{ $product->id }})">Add
+                                                to Cart</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        @endforeach --}}
-                        @php
-                            $selectedCategoryId = isset($_GET['category']) ? $_GET['category'] : null;
-                        @endphp
-                        @foreach ($productlist as $product)
-                            @if ($product->productSubCategory->category_id == $selectedCategoryId || $selectedCategoryId === null)
-                                <div class="col-6 col-md-4">
-                                    <div
-                                        class="card list-item bg-white rounded overflow-hidden position-relative shadow-sm">
-                                        <span class="like-icon"><a href="#"><i
-                                                    class="icofont icofont-heart"></i></a></span>
-                                        <a href="#">
-                                            <span class="badge badge-danger">NEW</span>
-                                            <img src="{{ asset($product->product_images) }}" class="card-img-top"
-                                                alt="...">
-                                        </a>
-                                        <div class="card-body">
-                                            <h6 class="card-title mb-1">
-                                                {{ $product->productSubCategory->sub_category_name }}
-                                            </h6>
-                                            <div class="stars-rating">
-                                                <i class="icofont icofont-star active"></i>
-                                                <i class="icofont icofont-star active"></i>
-                                                <i class="icofont icofont-star active"></i>
-                                                <i class="icofont icofont-star active"></i>
-                                                <i class="icofont icofont-star"></i>
-                                                <span>613</span><br />
-                                                <select name="size">
-                                                    @foreach (explode(',', $product->size) as $size)
-                                                        <option value="{{ $size }}">{{ $size }}
-                                                        </option>
-                                                    @endforeach
-                                                </select>
-                                            </div>
-                                            <p class="mb-0 text-dark">{{ $product->price }} <span
-                                                    class="text-black-50"><del>$500.00</del></span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            @endif
                         @endforeach
-
-                        <div class="col-md-12 text-center load-more">
-                            <button class="btn btn-primary btn-sm" type="button" disabled>
-                                <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
-                                Loading...
-                            </button>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -499,3 +454,46 @@
         </div>
     </section>
 </x-guest-layout>
+<script>
+    function addProduct(prodimage, prodcat, prodprice, prodid) {
+        var selectedSize = $('#sizeSelect' + prodid).val();
+
+        if (!selectedSize || selectedSize === "Select Size") {
+            alert("Please select a size");
+            return;
+        }
+
+        var token = $('meta[name="csrf-token"]').attr('content');
+
+        $.ajax({
+            type: 'POST',
+            url: '{{ route('addToCart') }}',
+            dataType: 'json',
+            data: {
+                _token: token,
+                prodimage: prodimage,
+                prodcat: prodcat,
+                prodprice: prodprice,
+                prodid: prodid,
+                prodsize: selectedSize,
+                prodQuantity: "1",
+            },
+            success: function(response) {
+                if (response.status == 1) {
+                    alert("Added to Cart");
+                }
+                window.location.href = "{{ route('checkout') }}";
+            },
+            error: function(xhr, status, error) {
+                // Handle error response
+                console.log(xhr.responseText);
+                // Display error message to the user
+                var errorMessage = 'An error occurred during checkout. Please try again.';
+                if (xhr.responseJSON && xhr.responseJSON.message) {
+                    errorMessage = xhr.responseJSON.message;
+                }
+                alert(errorMessage);
+            }
+        });
+    }
+</script>

@@ -35,9 +35,6 @@
                             <a class="nav-link" href="{{ route('about') }}">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('productlist') }}">Products</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="{{ route('faq') }}">FAQ's</a>
                         </li>
                         <li class="nav-item">
@@ -75,14 +72,7 @@
                             <li class="nav-item cart-nav">
                                 <a data-toggle="offcanvas" class="nav-link" href="#">
                                     <i class="icofont-basket"></i> Cart
-                                    <span class="badge badge-danger">5</span>
-                                </a>
-                            </li>
-                        @else
-                            <li class="nav-item cart-nav">
-                                <a class="nav-link" href="{{ route('login_register') }}">
-                                    <i class="icofont-basket"></i> Cart
-                                    <span class="badge badge-danger">5</span>
+                                    <span class="badge badge-danger">{{ $checkcount }}</span>
                                 </a>
                             </li>
                         @endif

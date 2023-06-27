@@ -10,38 +10,41 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form method="post" action={{ route('profile_update', $userdetails[0]->id) }}>
+                        @csrf
                         <div class="form-row">
+                            <div class="form-group col-md-12 mb-0">
+                                <label>Name
+                                </label>
+                                <input type="text" name="name" value="{{ $userdetails[0]->name }}"
+                                    class="form-control" placeholder="Enter Your Name
+                              ">
+                            </div>
                             <div class="form-group col-md-12">
                                 <label>Phone number
                                 </label>
-                                <input type="text" value="+91 85680-79956" class="form-control"
-                                    placeholder="Enter Phone number">
+                                <input type="text" name="number" value="{{ $userdetails[0]->number }}"
+                                    class="form-control" placeholder="Enter Phone number">
                             </div>
                             <div class="form-group col-md-12">
                                 <label>Email id
                                 </label>
-                                <input type="text" value="iamosahan@gmail.com" class="form-control"
-                                    placeholder="Enter Email id
+                                <input type="text" name="email" value="{{ $userdetails[0]->email }}"
+                                    class="form-control" placeholder="Enter Email id
                               ">
                             </div>
-                            <div class="form-group col-md-12 mb-0">
-                                <label>Password
-                                </label>
-                                <input type="password" value="**********" class="form-control"
-                                    placeholder="Enter password
-                              ">
-                            </div>
+
                         </div>
-                    </form>
+
                 </div>
                 <div class="modal-footer">
                     <button type="button"
                         class="btn d-flex w-50 text-center justify-content-center btn-outline-primary"
                         data-dismiss="modal">CANCEL
-                    </button><button type="button"
+                    </button><button type="submit"
                         class="btn d-flex w-50 text-center justify-content-center btn-primary">UPDATE</button>
                 </div>
+                </form>
             </div>
         </div>
     </div>
@@ -398,6 +401,32 @@
         </div>
     </div>
 
+    <div class="modal fade" id="action-to-vieworderlist" tabindex="-1" role="dialog"
+        aria-labelledby="delete-address" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="delete-address">Order View List</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Update the modal body content with the order details -->
+                    <div id="modal-product-table"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button"
+                        class="btn d-flex w-50 text-center justify-content-center btn-outline-primary"
+                        data-dismiss="modal">CANCEL</button>
+                    <button type="button"
+                        class="btn d-flex w-50 text-center justify-content-center btn-primary">DELETE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <div class="modal fade" id="delete-address-modal" tabindex="-1" role="dialog"
         aria-labelledby="delete-address" aria-hidden="true">
         <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
@@ -433,11 +462,10 @@
                                     <img class="mb-3 rounded-pill shadow-sm mt-1"
                                         src="{{ asset('frontend/img/user/1.jpg') }}" alt="gurdeep singh osahan">
                                     <div class="osahan-user-media-body">
-                                        <h6 class="mb-2 font-weight-bold">Gurdeep Singh</h6>
-                                        <p class="mb-1">+91 85680-79956</p>
-                                        <p><a href="https://askbootstrap.com/cdn-cgi/l/email-protection"
-                                                class="__cf_email__"
-                                                data-cfemail="0e676f63617d6f666f604e69636f6762206d6163">[email&#160;protected]</a>
+                                        <h6 class="mb-2 font-weight-bold"> {{ $userdetails[0]->name }}</h6>
+                                        <p class="mb-1">{{ $userdetails[0]->number }}</p>
+                                        <p>
+                                            {{ $userdetails[0]->email }}
                                         </p>
                                         <p class="mb-0 font-weight-bold"><a class="btn btn-outline-info btn-sm"
                                                 data-toggle="modal" data-target="#edit-profile-modal"
@@ -489,44 +517,49 @@
                                     suffered alteration in some form, by injected humour, or randomised words which
                                     don't look even slightly believable. If you are going to use a passage of Lorem
                                     Ipsum... </p>
-                                <form>
+                                <form method="post" action={{ route('profile_update', $userdetails[0]->id) }}>
+                                    @csrf
                                     <div class="row">
-                                        <div class="col-sm-6">
+                                        <div class="col-sm-4">
                                             <div class="form-group">
                                                 <label class="control-label">First Name <span
                                                         class="required">*</span></label>
-                                                <input class="form-control border-form-control" value
-                                                    placeholder="Gurdeep" type="text">
+                                                <input class="form-control border-form-control" name="name"
+                                                    value={{ $userdetails[0]->name }} placeholder="Gurdeep"
+                                                    type="text">
                                             </div>
                                         </div>
-                                        <div class="col-sm-6">
+                                        {{-- <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label class="control-label">Last Name <span
                                                         class="required">*</span></label>
                                                 <input class="form-control border-form-control" value
                                                     placeholder="Osahan" type="text">
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-6">
+                                        </div> --}}
+
+                                        <div class="col-sm-4">
                                             <div class="form-group">
                                                 <label class="control-label">Phone <span
                                                         class="required">*</span></label>
-                                                <input class="form-control border-form-control" value
-                                                    placeholder="123 456 7890" type="number">
+                                                <input class="form-control border-form-control" name="number"
+                                                    value={{ $userdetails[0]->number }}
+                                                    placeholder="Enter Your Phone Number" type="number">
                                             </div>
                                         </div>
-                                        <div class="col-sm-6">
+                                        <div class="col-sm-4">
                                             <div class="form-group">
                                                 <label class="control-label">Email Address <span
                                                         class="required">*</span></label>
-                                                <input class="form-control border-form-control " value
-                                                    placeholder="iamosahan@gmail.com" disabled type="email">
+                                                <input class="form-control border-form-control "
+                                                    value={{ $userdetails[0]->email }}
+                                                    placeholder="Enter Your Email Address" name="email"
+                                                    type="email">
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row">
+
+                                    {{-- <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label class="control-label">Country <span
@@ -836,11 +869,13 @@
                                                 <textarea class="form-control border-form-control"></textarea>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> --}}
                                     <div class="row">
                                         <div class="col-sm-12 text-right">
-                                            <button type="button" class="btn btn-outline-danger"> Cencel </button>
-                                            <button type="button" class="btn btn-primary"> Save Changes </button>
+                                            <button type="button" class="btn btn-outline-danger"
+                                                href="{{ route('profile') }}"> Cancel </button>
+                                            <button type="submit" class="btn btn-primary" name="submit"> Save
+                                                Changes </button>
                                         </div>
                                     </div>
                                 </form>
@@ -953,8 +988,8 @@
                                                         class="icofont icofont-close-line"></i></a></span>
                                             <a href="#">
                                                 <span class="badge badge-danger">NEW</span>
-                                                <img src="{{ asset('frontend/img/item/1.jpg') }}" class="card-img-top"
-                                                    alt="..."></a>
+                                                <img src="{{ asset('frontend/img/item/1.jpg') }}"
+                                                    class="card-img-top" alt="..."></a>
                                             <div class="card-body">
                                                 <h6 class="card-title mb-1">Floret Printed Ivory Skater Dress</h6>
                                                 <div class="stars-rating"><i
@@ -975,8 +1010,8 @@
                                                         class="icofont icofont-close-line"></i></a></span>
                                             <a href="#">
                                                 <span class="badge badge-success">50% OFF</span>
-                                                <img src="{{ asset('frontend/img/item/2.jpg') }}" class="card-img-top"
-                                                    alt="..."></a>
+                                                <img src="{{ asset('frontend/img/item/2.jpg') }}"
+                                                    class="card-img-top" alt="..."></a>
                                             <div class="card-body">
                                                 <h6 class="card-title mb-1">Floret Printed Ivory Skater Dress</h6>
                                                 <div class="stars-rating"><i
@@ -998,8 +1033,8 @@
                                                         class="icofont icofont-close-line"></i></a></span>
                                             <a href="#">
                                                 <span class="badge badge-danger">NEW</span>
-                                                <img src="{{ asset('frontend/img/item/3.jpg') }}" class="card-img-top"
-                                                    alt="..."></a>
+                                                <img src="{{ asset('frontend/img/item/3.jpg') }}"
+                                                    class="card-img-top" alt="..."></a>
                                             <div class="card-body">
                                                 <h6 class="card-title mb-1">Floret Printed Ivory Skater Dress</h6>
                                                 <div class="stars-rating"><i
@@ -1021,8 +1056,8 @@
                                                         class="icofont icofont-close-line"></i></a></span>
                                             <a href="#">
                                                 <span class="badge badge-success">50% OFF</span>
-                                                <img src="{{ asset('frontend/img/item/4.jpg') }}" class="card-img-top"
-                                                    alt="..."></a>
+                                                <img src="{{ asset('frontend/img/item/4.jpg') }}"
+                                                    class="card-img-top" alt="..."></a>
                                             <div class="card-body">
                                                 <h6 class="card-title mb-1">Floret Printed Ivory Skater Dress</h6>
                                                 <div class="stars-rating"><i
@@ -1043,8 +1078,8 @@
                                                         class="icofont icofont-close-line"></i></a></span>
                                             <a href="#">
                                                 <span class="badge badge-danger">NEW</span>
-                                                <img src="{{ asset('frontend/img/item/5.jpg') }}" class="card-img-top"
-                                                    alt="..."></a>
+                                                <img src="{{ asset('frontend/img/item/5.jpg') }}"
+                                                    class="card-img-top" alt="..."></a>
                                             <div class="card-body">
                                                 <h6 class="card-title mb-1">Floret Printed Ivory Skater Dress</h6>
                                                 <div class="stars-rating"><i
@@ -1112,130 +1147,31 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>#243</td>
-                                                <td>August 08, 2019</td>
-                                                <td><span class="badge badge-danger">Canceled</span></td>
-                                                <td>$760.50</td>
-                                                <td><a data-toggle="tooltip" data-placement="top" title
-                                                        href="#" data-original-title="View Detail"
-                                                        class="btn btn-info btn-sm"><i
-                                                            class="icofont-eye-alt"></i></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>#258</td>
-                                                <td>July 21, 2019</td>
-                                                <td><span class="badge badge-info">In Progress</span></td>
-                                                <td>$315.20</td>
-                                                <td><a data-toggle="tooltip" data-placement="top" title
-                                                        href="#" data-original-title="View Detail"
-                                                        class="btn btn-info btn-sm"><i
-                                                            class="icofont-eye-alt"></i></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>#254</td>
-                                                <td>June 15, 2019</td>
-                                                <td><span class="badge badge-warning">Delayed</span></td>
-                                                <td>$1,264.00</td>
-                                                <td><a data-toggle="tooltip" data-placement="top" title
-                                                        href="#" data-original-title="View Detail"
-                                                        class="btn btn-info btn-sm"><i
-                                                            class="icofont-eye-alt"></i></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>#293</td>
-                                                <td>May 19, 2019</td>
-                                                <td><span class="badge badge-success">Delivered</span></td>
-                                                <td>$198.35</td>
-                                                <td><a data-toggle="tooltip" data-placement="top" title
-                                                        href="#" data-original-title="View Detail"
-                                                        class="btn btn-info btn-sm"><i
-                                                            class="icofont-eye-alt"></i></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>#266</td>
-                                                <td>April 04, 2019</td>
-                                                <td><span class="badge badge-success">Delivered</span></td>
-                                                <td>$598.35</td>
-                                                <td><a data-toggle="tooltip" data-placement="top" title
-                                                        href="#" data-original-title="View Detail"
-                                                        class="btn btn-info btn-sm"><i
-                                                            class="icofont-eye-alt"></i></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>#277</td>
-                                                <td>March 30, 2019</td>
-                                                <td><span class="badge badge-success">Delivered</span></td>
-                                                <td>$98.35</td>
-                                                <td><a data-toggle="tooltip" data-placement="top" title
-                                                        href="#" data-original-title="View Detail"
-                                                        class="btn btn-info btn-sm"><i
-                                                            class="icofont-eye-alt"></i></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>#243</td>
-                                                <td>August 08, 2019</td>
-                                                <td><span class="badge badge-danger">Canceled</span></td>
-                                                <td>$760.50</td>
-                                                <td><a data-toggle="tooltip" data-placement="top" title
-                                                        href="#" data-original-title="View Detail"
-                                                        class="btn btn-info btn-sm"><i
-                                                            class="icofont-eye-alt"></i></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>#258</td>
-                                                <td>July 21, 2019</td>
-                                                <td><span class="badge badge-info">In Progress</span></td>
-                                                <td>$315.20</td>
-                                                <td><a data-toggle="tooltip" data-placement="top" title
-                                                        href="#" data-original-title="View Detail"
-                                                        class="btn btn-info btn-sm"><i
-                                                            class="icofont-eye-alt"></i></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>#254</td>
-                                                <td>June 15, 2019</td>
-                                                <td><span class="badge badge-warning">Delayed</span></td>
-                                                <td>$1,264.00</td>
-                                                <td><a data-toggle="tooltip" data-placement="top" title
-                                                        href="#" data-original-title="View Detail"
-                                                        class="btn btn-info btn-sm"><i
-                                                            class="icofont-eye-alt"></i></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>#293</td>
-                                                <td>May 19, 2019</td>
-                                                <td><span class="badge badge-success">Delivered</span></td>
-                                                <td>$198.35</td>
-                                                <td><a data-toggle="tooltip" data-placement="top" title
-                                                        href="#" data-original-title="View Detail"
-                                                        class="btn btn-info btn-sm"><i
-                                                            class="icofont-eye-alt"></i></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>#266</td>
-                                                <td>April 04, 2019</td>
-                                                <td><span class="badge badge-success">Delivered</span></td>
-                                                <td>$598.35</td>
-                                                <td><a data-toggle="tooltip" data-placement="top" title
-                                                        href="#" data-original-title="View Detail"
-                                                        class="btn btn-info btn-sm"><i
-                                                            class="icofont-eye-alt"></i></a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>#277</td>
-                                                <td>March 30, 2019</td>
-                                                <td><span class="badge badge-success">Delivered</span></td>
-                                                <td>$98.35</td>
-                                                <td><a data-toggle="tooltip" data-placement="top" title
-                                                        href="#" data-original-title="View Detail"
-                                                        class="btn btn-info btn-sm"><i
-                                                            class="icofont-eye-alt"></i></a></td>
-                                            </tr>
+                                            @foreach ($orderdetails as $orders)
+                                                <tr>
+                                                    <td>{{ $orders->id }}</td>
+                                                    @php
+                                                        $timestamp = time(); // Get the current timestamp
+                                                        $formattedDateTime = date('F j, Y h:i:s A', $timestamp);
+                                                    @endphp
+                                                    <td>{{ $formattedDateTime }}</td>
+                                                    <td><span class="badge badge-danger">{{ $orders->status }}</span>
+                                                    </td>
+                                                    <td>{{ $orders->total_price }}</td>
+                                                    <td>
+                                                        <a class="btn btn-info btn-sm" data-toggle="modal"
+                                                            onclick="viewOrder('{{ $orders->id }}', '{{ $orders->product_id }}')">
+                                                            <i class="icofont-eye-alt"></i>
+                                                        </a>
+
+                                                    </td>
+                                                </tr>
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
+
                             <div class="tab-pane fade" id="order-status" role="tabpanel"
                                 aria-labelledby="order-status-tab">
                                 <h4 class="text-dark mt-0 mb-4">Your Order Status</h4>
@@ -1335,8 +1271,7 @@
                                                                 <tbody>
                                                                     <tr>
                                                                         <td class="cart_product"><a
-                                                                                href="#"><img
-                                                                                    class="img-fluid"
+                                                                                href="#"><img class="img-fluid"
                                                                                     src="{{ asset('frontend/img/item/1.jpg') }}"
                                                                                     alt></a></td>
                                                                         <td class="cart_description">
@@ -1365,8 +1300,7 @@
                                                                             </select>
                                                                         </td>
                                                                         <td class="price">
-                                                                            <p
-                                                                                class="f-14 mb-0 text-dark float-right">
+                                                                            <p class="f-14 mb-0 text-dark float-right">
                                                                                 $250.00 <del
                                                                                     class="small text-secondary">$
                                                                                     500.00 </del></p>
@@ -1374,8 +1308,7 @@
                                                                     </tr>
                                                                     <tr>
                                                                         <td class="cart_product"><a
-                                                                                href="#"><img
-                                                                                    class="img-fluid"
+                                                                                href="#"><img class="img-fluid"
                                                                                     src="{{ asset('frontend/img/item/2.jpg') }}"
                                                                                     alt></a></td>
                                                                         <td class="cart_description">
@@ -1404,8 +1337,7 @@
                                                                             </select>
                                                                         </td>
                                                                         <td class="price">
-                                                                            <p
-                                                                                class="f-14 mb-0 text-dark float-right">
+                                                                            <p class="f-14 mb-0 text-dark float-right">
                                                                                 $250.00 <del
                                                                                     class="small text-secondary">$
                                                                                     500.00 </del></p>
@@ -1413,8 +1345,7 @@
                                                                     </tr>
                                                                     <tr>
                                                                         <td class="cart_product"><a
-                                                                                href="#"><img
-                                                                                    class="img-fluid"
+                                                                                href="#"><img class="img-fluid"
                                                                                     src="{{ asset('frontend/img/item/3.jpg') }}"
                                                                                     alt></a></td>
                                                                         <td class="cart_description">
@@ -1443,8 +1374,7 @@
                                                                             </select>
                                                                         </td>
                                                                         <td class="price">
-                                                                            <p
-                                                                                class="f-14 mb-0 text-dark float-right">
+                                                                            <p class="f-14 mb-0 text-dark float-right">
                                                                                 $250.00 <del
                                                                                     class="small text-secondary">$
                                                                                     500.00 </del></p>
@@ -1452,8 +1382,7 @@
                                                                     </tr>
                                                                     <tr>
                                                                         <td class="cart_product"><a
-                                                                                href="#"><img
-                                                                                    class="img-fluid"
+                                                                                href="#"><img class="img-fluid"
                                                                                     src="{{ asset('frontend/img/item/4.jpg') }}"
                                                                                     alt></a></td>
                                                                         <td class="cart_description">
@@ -1482,8 +1411,7 @@
                                                                             </select>
                                                                         </td>
                                                                         <td class="price">
-                                                                            <p
-                                                                                class="f-14 mb-0 text-dark float-right">
+                                                                            <p class="f-14 mb-0 text-dark float-right">
                                                                                 $250.00 <del
                                                                                     class="small text-secondary">$
                                                                                     500.00 </del></p>
@@ -1520,4 +1448,45 @@
             </div>
         </div>
     </section>
+    <script>
+        function viewOrder(orderId, productId) {
+            // AJAX request to fetch order details
+            $.ajax({
+                url: '/getOrderDetails/' + orderId,
+                type: 'GET',
+                success: function(response) {
+                    // Populate the modal with the retrieved data
+                    var orderData = response.data.orderitems;
+                    var productData = response.products;
+
+                    // Iterate over productData and display product information
+                    var productTableBody = $('#modal-product-table');
+                    productTableBody.empty();
+                    $.each(productData, function(index, product) {
+                        var productInfo = $('<div>').addClass('product-info');
+                        var productImage = $('<div>').addClass('product-image').append('<img src="' +
+                            product.product_images + '">');
+                        var productDetails = $('<div>').addClass('product-details');
+
+                        var size = $('<p>').addClass('mb-0 form-control').text('Size: ' + orderData
+                            .product_size);
+                        var price = $('<p>').addClass('mb-0 form-control').text('Price: ' + product
+                            .price);
+                        var quantity = $('<p>').addClass('mb-0 form-control').text('Quantity: ' +
+                            product.quantity);
+                        var subCategory = $('<p>').addClass('mb-0 form-control').text('Sub Category: ' +
+                            product
+                            .sub_category_name);
+
+                        productDetails.append(size, price, quantity, subCategory);
+                        productInfo.append(productImage, productDetails);
+                        productTableBody.append(productInfo);
+                    });
+
+                    // Show the modal
+                    $('#action-to-vieworderlist').modal('show');
+                }
+            });
+        }
+    </script>
 </x-guest-layout>

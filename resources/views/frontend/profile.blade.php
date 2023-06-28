@@ -1463,22 +1463,22 @@
                     var productTableBody = $('#modal-product-table');
                     productTableBody.empty();
                     $.each(productData, function(index, product) {
+
                         var productInfo = $('<div>').addClass('product-info');
                         var productImage = $('<div>').addClass('product-image').append('<img src="' +
-                            product.product_images + '">');
+                            product.product_image + '">');
                         var productDetails = $('<div>').addClass('product-details');
 
-                        var size = $('<p>').addClass('mb-0 form-control').text('Size: ' + orderData
+                        var size = $('<p>').addClass('mb-0 form-control').text('Size: ' + product
                             .product_size);
                         var price = $('<p>').addClass('mb-0 form-control').text('Price: ' + product
-                            .price);
+                            .product_price);
                         var quantity = $('<p>').addClass('mb-0 form-control').text('Quantity: ' +
-                            product.quantity);
-                        var subCategory = $('<p>').addClass('mb-0 form-control').text('Sub Category: ' +
-                            product
-                            .sub_category_name);
+                            product.product_quantity);
+                        var productName = $('<p>').addClass('mb-0 form-control').text('Product Name: ' +
+                            product.product_name);
 
-                        productDetails.append(size, price, quantity, subCategory);
+                        productDetails.append(size, price, quantity, productName);
                         productInfo.append(productImage, productDetails);
                         productTableBody.append(productInfo);
                     });

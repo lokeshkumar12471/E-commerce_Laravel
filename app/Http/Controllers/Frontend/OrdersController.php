@@ -30,25 +30,53 @@ class OrdersController extends Controller
     echo json_encode($response, true);
 }
 
-public function getOrderDetails($id) {
+// public function getOrderDetails($id) {
+//     $data['orderitems'] = OrderList::where('id', $id)->first();
+//     $totalPro = [];
+
+//     if ($data['orderitems']) {
+//         $productIds = explode(',', $data['orderitems']->product_id);
+
+//         foreach ($productIds as $prodid) {
+//             $product['productsitems'] = ProductSize::where('id', $prodid)->get(); // Use first() instead of get()
+//             if ($product['productsitems']) {
+//                 $totalPro[] = $product['productsitems'];
+//             }
+//         }
+//     }
+//     // Retrieve product details using the query with the condition where('id', $prodid)
+//     $products = DB::select('SELECT product_sizes.product_images, product_sizes.size, product_sizes.price, product_sizes.inventory AS quantity, product_sub_categories.sub_category_name
+//                    FROM product_sizes
+//                    INNER JOIN product_sub_categories ON product_sizes.subcategory_id = product_sub_categories.id
+//                    WHERE product_sizes.id IN ('.implode(',', $productIds).')');
+
+//     return response()->json(['data' => $data, 'totalPro' => $totalPro, 'products' => $products]);
+// }
+
+   public function getOrderDetails($id) {
     $data['orderitems'] = OrderList::where('id', $id)->first();
+    $productIds = explode(',', $data['orderitems']->product_id);
+    $productSize = explode(',', $data['orderitems']->product_size);
+
     $totalPro = [];
 
-    if ($data['orderitems']) {
-        $productIds = explode(',', $data['orderitems']->product_id);
+    foreach ($productIds as $index => $productId) {
+        $productItem = ProductSize::where('id', $productId)->first();
 
-        foreach ($productIds as $prodid) {
-            $product['productsitems'] = ProductSize::where('id', $prodid)->get(); // Use first() instead of get()
-            if ($product['productsitems']) {
-                $totalPro[] = $product['productsitems'];
-            }
+        if ($productItem) {
+            $productItem->size = $productSize[$index];
+            $totalPro[] = $productItem;
         }
     }
-    // Retrieve product details using the query with the condition where('id', $prodid)
-    $products = DB::select('SELECT product_sizes.product_images, product_sizes.size, product_sizes.price, product_sizes.inventory AS quantity, product_sub_categories.sub_category_name
-                   FROM product_sizes
-                   INNER JOIN product_sub_categories ON product_sizes.subcategory_id = product_sub_categories.id
-                   WHERE product_sizes.id IN ('.implode(',', $productIds).')');
+
+    $productIdsString = implode(',', $productIds);
+
+    $products = DB::select("
+        SELECT checkouts.product_image, checkouts.product_size, checkouts.product_price, checkouts.product_quantity, checkouts.product_name
+        FROM checkouts
+        INNER JOIN product_sizes ON product_sizes.id = checkouts.product_id
+        WHERE product_sizes.id IN ($productIdsString)
+    ");
 
     return response()->json(['data' => $data, 'totalPro' => $totalPro, 'products' => $products]);
 }

@@ -10,10 +10,10 @@ class OrderList extends Model
 {
     use HasFactory;
     protected $fillable=[
-            'order_id',
+            'id',
             'product_id',
-            'date_of_purchased',
             'status',
-            'total_price'
+            'total_price',
+            'product_size'
     ];
 }

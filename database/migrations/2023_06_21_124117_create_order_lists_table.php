@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('status');
             $table->string('total_price');
             $table->string('product_id');
+            $table->string('product_size');
             $table->timestamps();
         });
     }

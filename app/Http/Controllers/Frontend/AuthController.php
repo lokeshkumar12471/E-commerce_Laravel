@@ -34,23 +34,24 @@ $data->email=$request->email;
 $data->password = Hash::make($request->password);
 $data->status="1";
 $data->save();
+Auth::login($data);
 return redirect()->route('home')->with('success','Successfully Registered!');
     }
 
 
     public function postLogin(Request $request)
     {
-        $request->validate([
-        'email' => 'required',
-        'password' => 'required',
-        ]);
         $credentials = $request->only('email', 'password');
-        $sessionvalue = User::where('email',$request->email)->get();
+
         if (Auth::attempt($credentials)) {
-          session(['userid' => $sessionvalue[0]->id]);
-        return redirect()->route('home')->with('success','You Successfully Loggedin!');
+
+             // Authentication successful, store values in session
+           $user = Auth::user();
+            session(['email' => $user->email, 'password' => $user->password, 'id' => $user->id]);
+            return redirect()->route('home')->with('success', 'You have successfully logged in!');
         }
-        return redirect()->route('login_register')->with('error','Oppes! You Have Entered invalid credentials');
+
+        return redirect()->route('login_register')->with('error', 'Oops! You have entered invalid credentials.');
     }
 
     public function logout() {

@@ -13,6 +13,8 @@ class OrderList extends Model
             'id',
             'product_id',
             'status',
+            'product_image',
+            'product_name',
             'total_price',
             'product_size'
     ];

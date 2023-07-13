@@ -72,7 +72,9 @@
                             <li class="nav-item cart-nav">
                                 <a data-toggle="offcanvas" class="nav-link" href="#">
                                     <i class="icofont-basket"></i> Cart
-                                    <span class="badge badge-danger">{{ $checkcount }}</span>
+                                    <span class="badge badge-danger">
+                                        {{ $checkcount }}
+                                    </span>
                                 </a>
                             </li>
                         @endif

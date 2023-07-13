@@ -14,7 +14,7 @@ use App\Models\Checkout;
 class ProfileController extends Controller
 {
     public function index(){
-         $userID = Session::get('userid');
+         $userID = Session::get('id');
         if(Auth::check()){
         $userdetails=User::where('id',$userID)->get();
          $orderdetails=OrderList::get();

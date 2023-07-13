@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Session;
 use App\Http\Controllers\Controller;
 use App\Models\OrderList;
 use App\Models\ProductSize;
+use App\Models\ProductSubCategory;
 use Illuminate\Support\Facades\DB;
 
 
@@ -15,15 +16,17 @@ class OrdersController extends Controller
 
  public function procced_checkout(Request $request)
 {
-    $ProductIds = $_POST['ProductIds'];
-    $Total = $_POST['Total'];
-    $product_size = $_POST['Size'];
-    $userID = Session::get('userid');
+    $ProductIds = $request->input('ProductIds');
+    $Total = $request->input('Total');
+    $product_size = $request->input('Size');
+    $userID = $request->session()->get('id');
+
     $Orderdetails = new OrderList();
     $Orderdetails->product_id = $ProductIds;
     $Orderdetails->status = "OrderPlaced";
     $Orderdetails->total_price = $Total;
     $Orderdetails->product_size = $product_size;
+    $Orderdetails->user_id = $userID;
     $Orderdetails->save();
 
     $response['status'] = 1;
@@ -65,6 +68,7 @@ class OrdersController extends Controller
 
         if ($productItem) {
             $productItem->size = $productSize[$index];
+            $productItem->subcategory_name = ProductSubCategory::where('id', $productItem->subcategory_id)->pluck('sub_category_name')->first();
             $totalPro[] = $productItem;
         }
     }
@@ -72,9 +76,10 @@ class OrdersController extends Controller
     $productIdsString = implode(',', $productIds);
 
     $products = DB::select("
-        SELECT checkouts.product_image, checkouts.product_size, checkouts.product_price, checkouts.product_quantity, checkouts.product_name
-        FROM checkouts
-        INNER JOIN product_sizes ON product_sizes.id = checkouts.product_id
+        SELECT product_sizes.product_images, order_lists.product_size, product_sizes.price, product_sub_categories.sub_category_name
+        FROM product_sizes
+        INNER JOIN product_sub_categories ON  product_sub_categories.id = product_sizes.subcategory_id
+        INNER JOIN order_lists ON  order_lists.id = product_sizes.id
         WHERE product_sizes.id IN ($productIdsString)
     ");
 

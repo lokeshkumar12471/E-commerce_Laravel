@@ -25,7 +25,7 @@ class CheckoutController extends Controller
         $prodImage = $_POST['prodimage'];
         $prodPrice = $_POST['prodprice'];
         $prodCat = $_POST['prodcat'];
-        $userID = Session::get('userid');
+        $userID = Session::get('id');
         $prodQuantity=$_POST['prodQuantity'];
         $prodsize=$_POST['prodsize'];
 

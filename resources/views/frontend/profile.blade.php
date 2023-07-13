@@ -401,31 +401,39 @@
         </div>
     </div>
 
+
     <div class="modal fade" id="action-to-vieworderlist" tabindex="-1" role="dialog"
-        aria-labelledby="delete-address" aria-hidden="true">
-        <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="delete-address">Order View List</h5>
+                <div class="modal-header border-bottom-0 bg-primary text-white">
+                    <h5 class="modal-title" id="exampleModalLabel">Order View List</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <!-- Update the modal body content with the order details -->
-                    <div id="modal-product-table"></div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button"
-                        class="btn d-flex w-50 text-center justify-content-center btn-outline-primary"
-                        data-dismiss="modal">CANCEL</button>
-                    <button type="button"
-                        class="btn d-flex w-50 text-center justify-content-center btn-primary">DELETE</button>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Product Image</th>
+                                    <th>Product Name</th>
+                                    <th>Product Size</th>
+                                    <th>Product Quantity</th>
+                                    <th>Product Price</th>
+                                </tr>
+                            </thead>
+                            <tbody id="modal-product-table"></tbody>
+                        </table>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <h5>Total: <span id="modal-total-amount" class="price text-success"></span></h5>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
 
     <div class="modal fade" id="delete-address-modal" tabindex="-1" role="dialog"
         aria-labelledby="delete-address" aria-hidden="true">
@@ -1458,30 +1466,30 @@
                     // Populate the modal with the retrieved data
                     var orderData = response.data.orderitems;
                     var productData = response.products;
+                    var totalData = response.totalPro;
 
                     // Iterate over productData and display product information
                     var productTableBody = $('#modal-product-table');
                     productTableBody.empty();
-                    $.each(productData, function(index, product) {
+                    var totalPrice = 0; // Variable to calculate the total price
 
-                        var productInfo = $('<div>').addClass('product-info');
-                        var productImage = $('<div>').addClass('product-image').append('<img src="' +
-                            product.product_image + '">');
-                        var productDetails = $('<div>').addClass('product-details');
+                    $.each(totalData, function(index, product) {
+                        var tableRow = $('<tr>');
+                        var productImage = $('<td>').html('<img src="' + product.product_images + '">');
+                        var productName = $('<td>').text(product.subcategory_name);
+                        var size = $('<td>').text(product.size);
+                        var quantity = $('<td>').text(1);
+                        var price = $('<td>').text(product.price);
+                        var total = $('<td>').text(product.price * 1);
 
-                        var size = $('<p>').addClass('mb-0 form-control').text('Size: ' + product
-                            .product_size);
-                        var price = $('<p>').addClass('mb-0 form-control').text('Price: ' + product
-                            .product_price);
-                        var quantity = $('<p>').addClass('mb-0 form-control').text('Quantity: ' +
-                            product.product_quantity);
-                        var productName = $('<p>').addClass('mb-0 form-control').text('Product Name: ' +
-                            product.product_name);
+                        totalPrice += product.price * 1; // Calculate the total price
 
-                        productDetails.append(size, price, quantity, productName);
-                        productInfo.append(productImage, productDetails);
-                        productTableBody.append(productInfo);
+                        tableRow.append(productImage, productName, size, 1, price);
+                        productTableBody.append(tableRow);
                     });
+
+                    var totalAmount = $('<span>').addClass('price text-success').text(totalPrice + '');
+                    $('#modal-total-amount').empty().append(totalAmount);
 
                     // Show the modal
                     $('#action-to-vieworderlist').modal('show');
@@ -1489,4 +1497,5 @@
             });
         }
     </script>
+
 </x-guest-layout>

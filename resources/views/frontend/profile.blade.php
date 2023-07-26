@@ -498,6 +498,7 @@
                                     role="tab" aria-controls="wish-list" aria-selected="false"><i
                                         class="icofont-heart"></i> Wish List</a>
                             </li>
+
                             <li class="nav-item">
                                 <a class="nav-link active" id="order-list-tab" data-toggle="tab" href="#order-list"
                                     role="tab" aria-controls="order-list" aria-selected="false"><i
@@ -989,140 +990,35 @@
                                 aria-labelledby="wish-list-tab">
                                 <h4 class="text-dark mt-0 mb-4">Wish List</h4>
                                 <div class="row">
-                                    <div class="col-6 col-md-4">
-                                        <div
-                                            class="card list-item bg-white rounded overflow-hidden position-relative shadow-sm">
-                                            <span class="like-icon"><a href="#"> <i
-                                                        class="icofont icofont-close-line"></i></a></span>
-                                            <a href="#">
-                                                <span class="badge badge-danger">NEW</span>
-                                                <img src="{{ asset('frontend/img/item/1.jpg') }}"
-                                                    class="card-img-top" alt="..."></a>
-                                            <div class="card-body">
-                                                <h6 class="card-title mb-1">Floret Printed Ivory Skater Dress</h6>
-                                                <div class="stars-rating"><i
-                                                        class="icofont icofont-star active"></i><i
-                                                        class="icofont icofont-star active"></i><i
-                                                        class="icofont icofont-star active"></i><i
-                                                        class="icofont icofont-star active"></i><i
-                                                        class="icofont icofont-star"></i> <span>613</span></div>
-                                                <p class="mb-0 text-dark">$135.00 <span
-                                                        class="text-black-50"><del>$500.00 </del></span></p>
+                                    @foreach ($wishlist as $favourite)
+                                        <div class="col-6 col-md-4">
+
+                                            <div
+                                                class="card list-item bg-white rounded overflow-hidden position-relative shadow-sm">
+                                                <span class="like-icon"><a href="#"> <i
+                                                            class="icofont icofont-close-line"
+                                                            onclick="deleteFromWishlist('{{ $favourite->id }}')"></i></a></span>
+                                                <a href="#">
+                                                    <span class="badge badge-danger">NEW</span>
+                                                    <img src="{{ $favourite->wishlist_image }}" class="card-img-top"
+                                                        alt="..."></a>
+                                                <div class="card-body">
+                                                    <h6 class="card-title mb-1">{{ $favourite->wishlist_productname }}
+                                                    </h6>
+                                                    <div class="stars-rating"><i
+                                                            class="icofont icofont-star active"></i><i
+                                                            class="icofont icofont-star active"></i><i
+                                                            class="icofont icofont-star active"></i><i
+                                                            class="icofont icofont-star active"></i><i
+                                                            class="icofont icofont-star"></i> <span>613</span></div>
+                                                    <p class="mb-0 text-dark">${{ $favourite->wishlist_productprice }}
+                                                        <span class="text-black-50"><del>$500.00 </del></span>
+                                                    </p>
+                                                </div>
                                             </div>
+
                                         </div>
-                                    </div>
-                                    <div class="col-6 col-md-4">
-                                        <div
-                                            class="card list-item bg-white rounded overflow-hidden position-relative shadow-sm">
-                                            <span class="like-icon"><a href="#"> <i
-                                                        class="icofont icofont-close-line"></i></a></span>
-                                            <a href="#">
-                                                <span class="badge badge-success">50% OFF</span>
-                                                <img src="{{ asset('frontend/img/item/2.jpg') }}"
-                                                    class="card-img-top" alt="..."></a>
-                                            <div class="card-body">
-                                                <h6 class="card-title mb-1">Floret Printed Ivory Skater Dress</h6>
-                                                <div class="stars-rating"><i
-                                                        class="icofont icofont-star active"></i><i
-                                                        class="icofont icofont-star active"></i><i
-                                                        class="icofont icofont-star active"></i><i
-                                                        class="icofont icofont-star active"></i><i
-                                                        class="icofont icofont-star"></i> <span>613</span></div>
-                                                <p class="mb-0 text-dark">$ 135.00 <span
-                                                        class="bg-danger  rounded-sm pl-1 ml-1 pr-1 text-white small">
-                                                        50% OFF</span></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6 col-md-4">
-                                        <div
-                                            class="card list-item bg-white rounded overflow-hidden position-relative shadow-sm">
-                                            <span class="like-icon"><a href="#"> <i
-                                                        class="icofont icofont-close-line"></i></a></span>
-                                            <a href="#">
-                                                <span class="badge badge-danger">NEW</span>
-                                                <img src="{{ asset('frontend/img/item/3.jpg') }}"
-                                                    class="card-img-top" alt="..."></a>
-                                            <div class="card-body">
-                                                <h6 class="card-title mb-1">Floret Printed Ivory Skater Dress</h6>
-                                                <div class="stars-rating"><i
-                                                        class="icofont icofont-star active"></i><i
-                                                        class="icofont icofont-star active"></i><i
-                                                        class="icofont icofont-star active"></i><i
-                                                        class="icofont icofont-star active"></i><i
-                                                        class="icofont icofont-star"></i> <span>613</span></div>
-                                                <p class="mb-0 text-dark">$ 135.00 <span
-                                                        class="bg-info rounded-sm pl-1 ml-1 pr-1 text-white small">
-                                                        50% OFF</span></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6 col-md-4">
-                                        <div
-                                            class="card list-item bg-white rounded overflow-hidden position-relative shadow-sm">
-                                            <span class="like-icon"><a href="#"> <i
-                                                        class="icofont icofont-close-line"></i></a></span>
-                                            <a href="#">
-                                                <span class="badge badge-success">50% OFF</span>
-                                                <img src="{{ asset('frontend/img/item/4.jpg') }}"
-                                                    class="card-img-top" alt="..."></a>
-                                            <div class="card-body">
-                                                <h6 class="card-title mb-1">Floret Printed Ivory Skater Dress</h6>
-                                                <div class="stars-rating"><i
-                                                        class="icofont icofont-star active"></i><i
-                                                        class="icofont icofont-star active"></i><i
-                                                        class="icofont icofont-star active"></i><i
-                                                        class="icofont icofont-star active"></i><i
-                                                        class="icofont icofont-star"></i> <span>613</span></div>
-                                                <p class="mb-0 text-dark">$135.00 <span
-                                                        class="text-black-50"><del>$500.00 </del></span></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6 col-md-4">
-                                        <div
-                                            class="card list-item bg-white rounded overflow-hidden position-relative shadow-sm">
-                                            <span class="like-icon"><a href="#"> <i
-                                                        class="icofont icofont-close-line"></i></a></span>
-                                            <a href="#">
-                                                <span class="badge badge-danger">NEW</span>
-                                                <img src="{{ asset('frontend/img/item/5.jpg') }}"
-                                                    class="card-img-top" alt="..."></a>
-                                            <div class="card-body">
-                                                <h6 class="card-title mb-1">Floret Printed Ivory Skater Dress</h6>
-                                                <div class="stars-rating"><i
-                                                        class="icofont icofont-star active"></i><i
-                                                        class="icofont icofont-star active"></i><i
-                                                        class="icofont icofont-star active"></i><i
-                                                        class="icofont icofont-star active"></i><i
-                                                        class="icofont icofont-star"></i> <span>613</span></div>
-                                                <p class="mb-0 text-dark">$135.00 <span
-                                                        class="text-black-50"><del>$500.00 </del></span></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6 col-md-4">
-                                        <div
-                                            class="card list-item bg-white rounded overflow-hidden position-relative shadow-sm">
-                                            <span class="like-icon"><a href="#"> <i
-                                                        class="icofont icofont-close-line"></i></a></span>
-                                            <a href="#">
-                                                <span class="badge badge-success">50% OFF</span>
-                                                <img src="{{ asset('frontend/img/item/6.jpg') }}"
-                                                    class="card-img-top" alt="..."></a>
-                                            <div class="card-body">
-                                                <h6 class="card-title mb-1">Floret Printed Ivory Skater Dress</h6>
-                                                <div class="stars-rating"><i
-                                                        class="icofont icofont-star active"></i><i
-                                                        class="icofont icofont-star active"></i><i
-                                                        class="icofont icofont-star active"></i><i
-                                                        class="icofont icofont-star active"></i><i
-                                                        class="icofont icofont-star"></i> <span>613</span></div>
-                                                <p class="mb-0 text-dark">$135.00 <span
-                                                        class="text-black-50"><del>$500.00 </del></span></p>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @endforeach
                                 </div>
                                 <nav aria-label="Page navigation example">
                                     <ul class="pagination justify-content-center">
@@ -1495,6 +1391,23 @@
                     $('#action-to-vieworderlist').modal('show');
                 }
             });
+        }
+
+        function deleteFromWishlist(id) {
+            var token = $('meta[name="csrf_token"]').attr('content');
+            $.ajax({
+                type: 'GET',
+                url: '{{ route('deleteFromWishlist', ['id' => ':id']) }}'.replace(':id', id),
+                data: {
+                    _token: token,
+                },
+                success: function(response) {
+                    if (response) {
+                        alert('Product Removed From The Wishlist');
+                    }
+                    location.reload();
+                }
+            })
         }
     </script>
 

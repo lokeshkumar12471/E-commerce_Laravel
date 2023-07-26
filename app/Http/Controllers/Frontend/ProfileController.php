@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Frontend;
 
+use App\Models\WishList;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
@@ -19,7 +20,8 @@ class ProfileController extends Controller
         $userdetails=User::where('id',$userID)->get();
          $orderdetails=OrderList::get();
           $checkoutdetails=Checkout::get();
-        return view('frontend.profile',compact('userdetails','orderdetails','checkoutdetails'));
+          $wishlist=WishList::get();
+        return view('frontend.profile',compact('userdetails','orderdetails','checkoutdetails','wishlist'));
     }
     return redirect()->route('login_register')->with('error','Opps! You do not have access, Until Login');
 }
@@ -32,5 +34,11 @@ class ProfileController extends Controller
       $userupdate->email=$request->email;
       $userupdate->update();
     return redirect()->route('profile')->with('success','Data Was successfully Updated');
-}
+    }
+    public function deleteFromWishlist($id){
+     $delete=WishList::find($id);
+     $delete->delete();
+     return redirect()->route('profile')->with('success','Product Was successfully Removed');
+    }
+
 }

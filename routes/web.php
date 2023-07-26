@@ -11,6 +11,7 @@ use App\Http\Controllers\Frontend\ProductDetailController;
 use App\Http\Controllers\Frontend\ProductListController;
 use App\Http\Controllers\Frontend\ProfileController;
 use App\Http\Controllers\Frontend\OrdersController;
+use App\Http\Controllers\Frontend\WishListsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,7 +35,9 @@ Route::get('productlist/{category}', [ProductListController::class, 'index'])->n
 Route::get('productdetail',[ProductDetailController::class,'index'])->name('productdetail');
 Route::get('checkout',[CheckoutController::class,'index'])->name('checkout');
 Route::post('addToCart',[CheckoutController::class,'addToCart'])->name('addToCart');
+Route::post('addToWishList',[WishListsController::class,'addToWishList'])->name('addToWishList');
 Route::get('deleteFromCart/{id}',[CheckoutController::class,'deleteFromCart'])->name('deleteFromCart');
+Route::get('deleteFromWishlist/{id}',[ProfileController::class,'deleteFromWishlist'])->name('deleteFromWishlist');
 Route::post('procced_checkout',[OrdersController::class,'procced_checkout'])->name('proccedcheckout');
 Route::get('getOrderDetails/{id}', [OrdersController::class, 'getOrderDetails'])->name('getOrderDetails');
 Route::get('profile',[ProfileController::class,'index'])->name('profile');

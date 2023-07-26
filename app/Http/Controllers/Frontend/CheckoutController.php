@@ -41,6 +41,8 @@ class CheckoutController extends Controller
     $response['status'] = 1;
     echo json_encode($response,true);
     }
+
+
     public function deleteFromCart($id)
     {
     $cartItem = Checkout::find($id);

@@ -412,8 +412,8 @@
                             <div class="col-6 col-md-4">
                                 <div
                                     class="card list-item bg-white rounded overflow-hidden position-relative shadow-sm">
-                                    <span class="like-icon"><a href="#"><i
-                                                class="icofont icofont-heart"></i></a></span>
+                                    <span class="like-icon"><a href="#"><i class="icofont icofont-heart"
+                                                onclick="AddwishList('{{ $product->product_images }}',{{ $product->id }},'{{ $product->productSubCategory->sub_category_name }}',{{ $product->price }})"></i></a></span>
                                     <a href="#">
                                         <span class="badge badge-danger">NEW</span>
                                         <img src="{{ asset($product->product_images) }}" class="card-img-top"
@@ -494,6 +494,37 @@
                 }
                 alert(errorMessage);
             }
+        });
+    }
+
+    function AddwishList(wishImg, wishId, wishCat, wishPrice, ) {
+        var token = $('meta[name="csrf-token"]').attr('content');
+        $.ajax({
+            type: 'POST',
+            url: '{{ route('addToWishList') }}',
+            data: {
+                _token: token,
+                wishListImg: wishImg,
+                wishListId: wishId,
+                wishListCat: wishCat,
+                wishListPrice: wishPrice,
+            },
+            success: function(response) {
+                if (response) {
+                    alert('Added to WishList');
+                }
+            },
+            error: function(xhr, status, error) {
+                // Handle error response
+                console.log(xhr.responseText);
+                // Display error message to the user
+                var errorMessage = 'An error occurred during Added to Wishlist. Please try again.';
+                if (xhr.responseJSON && xhr.responseJSON.message) {
+                    errorMessage = xhr.responseJSON.message;
+                }
+                alert(errorMessage);
+            }
+
         });
     }
 </script>

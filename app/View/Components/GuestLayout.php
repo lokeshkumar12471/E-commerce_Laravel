@@ -5,6 +5,8 @@ namespace App\View\Components;
 use Illuminate\View\Component;
 use App\Models\Checkout;
 use App\Models\User;
+use App\Models\WishList;
+
 
 
 class GuestLayout extends Component
@@ -20,7 +22,9 @@ class GuestLayout extends Component
     {    $userdetails=User::get();
         $checkout = Checkout::get();
         $checkcount=Checkout::count();
-        return view('layouts.guest',compact('checkout','checkcount','userdetails'));
+        $wishlist = WishList::get();
+        $wishlistcount=WishList::count();
+        return view('layouts.guest',compact('checkout','checkcount','userdetails','wishlist','wishlistcount'));
     }
 
 }

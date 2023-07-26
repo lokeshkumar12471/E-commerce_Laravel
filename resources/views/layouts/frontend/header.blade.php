@@ -68,16 +68,32 @@
                                 <a class="nav-link" href="{{ route('login_register') }}">Login/Sign Up</a>
                             </li>
                         @endif
-                        @if (Auth::check())
-                            <li class="nav-item cart-nav">
-                                <a data-toggle="offcanvas" class="nav-link" href="#">
-                                    <i class="icofont-basket"></i> Cart
-                                    <span class="badge badge-danger">
-                                        {{ $checkcount }}
-                                    </span>
-                                </a>
-                            </li>
-                        @endif
+
+                        <li class="nav-item cart-nav">
+                            <a class="nav-link" href="{{ route('profile') . '#wish-list' }}">
+                                <i class="icofont-heart"></i></i> WishList
+                                @if (Auth::check() && Auth::id())
+                                    @if ($wishlistcount > 0)
+                                        <span class="badge badge-danger">
+                                            {{ $wishlistcount }}
+                                        </span>
+                                    @endif
+                                @endif
+                            </a>
+                        </li>
+                        <li class="nav-item cart-nav">
+                            <a data-toggle="offcanvas" class="nav-link" href="#">
+                                <i class="icofont-basket"></i> Cart
+                                @if (Auth::check() && Auth::id())
+                                    @if ($checkcount > 0)
+                                        <span class="badge badge-danger">
+                                            {{ $checkcount }}
+                                        </span>
+                                    @endif
+                                @endif
+                            </a>
+                        </li>
+
                     </ul>
                 </div>
             </div>

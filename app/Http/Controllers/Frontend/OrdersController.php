@@ -7,8 +7,11 @@ use Illuminate\Support\Facades\Session;
 use App\Http\Controllers\Controller;
 use App\Models\OrderList;
 use App\Models\ProductSize;
+use App\Models\Checkout;
 use App\Models\ProductSubCategory;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
+
 
 
 class OrdersController extends Controller
@@ -31,30 +34,11 @@ class OrdersController extends Controller
 
     $response['status'] = 1;
     echo json_encode($response, true);
+    $cartItems=Checkout::where('user_id',Auth::id())->get();
+    Checkout::destroy($cartItems);
+
 }
 
-// public function getOrderDetails($id) {
-//     $data['orderitems'] = OrderList::where('id', $id)->first();
-//     $totalPro = [];
-
-//     if ($data['orderitems']) {
-//         $productIds = explode(',', $data['orderitems']->product_id);
-
-//         foreach ($productIds as $prodid) {
-//             $product['productsitems'] = ProductSize::where('id', $prodid)->get(); // Use first() instead of get()
-//             if ($product['productsitems']) {
-//                 $totalPro[] = $product['productsitems'];
-//             }
-//         }
-//     }
-//     // Retrieve product details using the query with the condition where('id', $prodid)
-//     $products = DB::select('SELECT product_sizes.product_images, product_sizes.size, product_sizes.price, product_sizes.inventory AS quantity, product_sub_categories.sub_category_name
-//                    FROM product_sizes
-//                    INNER JOIN product_sub_categories ON product_sizes.subcategory_id = product_sub_categories.id
-//                    WHERE product_sizes.id IN ('.implode(',', $productIds).')');
-
-//     return response()->json(['data' => $data, 'totalPro' => $totalPro, 'products' => $products]);
-// }
 
    public function getOrderDetails($id) {
     $data['orderitems'] = OrderList::where('id', $id)->first();
